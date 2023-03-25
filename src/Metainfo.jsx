@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Row } from 'react-bootstrap'
+import { Form, Row } from 'react-bootstrap'
 import nodata from './assets/images/nodata.png'
 
 const Metainfo = (props) => {
@@ -105,7 +105,7 @@ const Metainfo = (props) => {
     rgm.brightnesses.push(-0.1, -0.1, -0.2, 0, - 0.2);
     pieSeries.slices.template.fillModifier = rgm;
     pieSeries.slices.template.strokeModifier = rgm;
-    pieSeries.slices.template.strokeOpacity = 0.4;
+    pieSeries.slices.template.strokeOpacity = 0.0001;
     pieSeries.slices.template.strokeWidth = 0;
     pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0.05;
     pieSeries.colors.list = [
@@ -120,9 +120,48 @@ const Metainfo = (props) => {
     chart.legend = new am4charts.Legend();
     chart.legend.position = "right";
 
+    //set true showData if some of the candidates is active
+    useEffect(() => {
+        if (filterCandidates.length > 0) {
+            setShowData(true)
+        }
+    }, [filterCandidates])
+
+    const [changeView, setChangeView] = useState(false)
 
     return (
-        <div id="chartdiv"></div>
+        <>
+            {
+                showData &&
+                <>
+                    <Form>
+                        <Form.Check
+                            value={changeView}
+                            onChange={() => setChangeView(!changeView)}
+                            type="switch"
+                            id="custom-switch"
+                            label="Cambiar vista de gráfico"
+                        />
+                    </Form>
+                    {
+                        !changeView && 
+                        <div id="chartdiv"></div>
+                    }{
+                        changeView &&
+                        <div>otra vista</div>
+                    }
+                </>
+            }
+            {
+                !showData &&
+                <Row className="nodata">
+                    <img
+                        src={nodata}
+                    />
+                </Row>
+            }
+        </>
+
     )
 }
 

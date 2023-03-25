@@ -1,5 +1,5 @@
 import './App.css'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Button, Col, Container, Form, Modal, Row } from 'react-bootstrap'
 import Metainfo from './Metainfo'
 import { useRef, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,11 +10,12 @@ import imgeuclides from './assets/images/candydatos/euclides-1.png'
 import imgpayo from './assets/images/candydatos/payocubas.png'
 import * as htmlToImage from 'html-to-image';
 import { saveAs } from 'file-saver';
+import logo from './assets/images/logo.png'
+import Plataforma from './Plataforma';
 
 function App() {
 
   const [select, setSelect] = useState('plataforma')
-  const [addClass, setAddClass] = useState(false)
   const nodeRef = useRef(null);
 
   const onChangeSelect = (e) => {
@@ -43,7 +44,6 @@ function App() {
 
   // function show responsive images to select candidate 
   const showImagesToSelect = () => {
-
     return (
       <>
         <Col className='justify-content-center d-flex md' >
@@ -138,6 +138,77 @@ function App() {
     return file;
   }
 
+  const [modalShow, setModalShow] = useState(false);
+
+  function renderForm(data) {
+    return (
+      <Form>
+        <Row className='formSendData'>
+          <Col>
+            <Form.Label>Nombre y apellido</Form.Label>
+            <Form.Group className="mb-3" controlId="forName" required>
+              <Form.Control type="text" required />
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Correo electrónico:</Form.Label>
+              <Form.Control type="email" placeholder="" required />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row className='formSendData'>
+          <Col>
+            <Form.Label>Telefono</Form.Label>
+            <Form.Group className="mb-3" controlId="forPgone" required>
+              <Form.Control type="text" required />
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Label>Tipo de uso:</Form.Label>
+            <Form.Select aria-label="Default select example">
+              <option value="1">Investigación</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </Form.Select>
+          </Col>
+        </Row>
+        <Modal.Footer className='mt-4'>
+          <Button className='regBtn' variant="primary" type="submit">
+            REGISTRARSE
+          </Button>
+        </Modal.Footer>
+
+      </Form>
+    )
+  }
+
+  function ModalExport(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <Modal.Body>
+          <div>
+            <img src={logo} alt='logo' />
+          </div>
+          <h4>EXPORTA LA COMPARACIÓN</h4>
+          <p>
+            Descarga ahora como <span className='clickeed' >JPG</span> o <span onClick={handleScreenshot} className='clickeed'>PNG</span>
+          </p>
+          <div className='separador'></div>
+          <p>Registrate para descargar los datos</p>
+          <p>en formato CSV/Excel</p>
+          {renderForm(props.onHide)}
+        </Modal.Body>
+      </Modal>
+    );
+  }
 
   return (
     <div className="App">
@@ -159,11 +230,17 @@ function App() {
         </Row>
         {
           select === 'plataforma' ?
-            <>redes</>
+            <Plataforma state={state} />
             :
             <Metainfo state={state} />
         }
-        <button onClick={handleScreenshot}>Take Screenshot</button>
+        <ModalExport
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+        <Button className='mt-5' variant="primary" onClick={() => setModalShow(true)}>
+          Exportar datos
+        </Button>
       </Container>
     </div>
   )

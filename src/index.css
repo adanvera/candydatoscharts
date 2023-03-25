@@ -8,11 +8,13 @@ import a font from folder src/assets/fonts
 
 .main {
   background-color: #ffffff;
-  border: 1px solid black;
   height: auto;
-  min-width:100%;
+  min-width: 100%;
   border-radius: 21px;
   padding: 30px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 21px;
+
 }
 
 p.titlehead {
@@ -26,8 +28,13 @@ p.titlehead {
   color: #5E5CA5;
 }
 
+html {
+  background: #ECEDFB;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #ECEDFB;
 }
 
 
@@ -40,6 +47,12 @@ body {
 
 .chartdiv {
   z-index: 1;
+}
+
+#otherChart {
+  width: 100%;
+  height: 400px;
+  margin: auto;
 }
 
 div#infoselect {
@@ -102,7 +115,7 @@ select.select.candy.w-100 {
 .selectcontainer.row {
   justify-content: space-between;
   background-color: white;
-  min-height: 75px ;
+  min-height: 75px;
   align-items: center;
 }
 
@@ -126,6 +139,75 @@ div#itemca {
   font-weight: 900;
 }
 
-.is-active{
+.is-active {
   border: 2px solid #fbbc04;
+}
+
+.nodata img {
+  height: 267px;
+  width: 300px;
+}
+
+.nodata.row {
+  text-align: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+span.clickeed {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  text-decoration-line: underline;
+  color: #5E5CA5;
+  cursor: pointer;
+}
+
+.separador {
+  border-top: 1px solid #E8E8E8;
+  width: 25%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.formSendData.row {
+  text-align: start;
+}
+
+.modal-footer {
+  justify-content: center !important;
+}
+
+
+button.btn.btn-primary {
+  font-family: 'Nunito Sans', sans-serif;
+  height: 49px;
+  left: 649px;
+  top: 869px;
+  background: linear-gradient(89.94deg, #FFB022 3.11%, #C56E9B 102.3%, rgba(217, 217, 217, 0) 102.3%, #C5709A 102.3%);
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+button.regBtn.btn.btn-primary {
+  background: #FFFFFF;
+  border: 1px solid #5E5CA5;
+  border-radius: 5px;
+  color: #5E5CA5;
+}
+
+.mt-4.modal-footer {
+  border: none;
+}
+
+.form-check.form-switch {
+  display: table;
 }
