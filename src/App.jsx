@@ -11,7 +11,7 @@ import imgpayo from './assets/images/candydatos/payocubas.png'
 import * as htmlToImage from 'html-to-image';
 import { saveAs } from 'file-saver';
 import logo from './assets/images/logo.png'
-import Plataforma from './Plataforma';
+import Menciones from './Menciones';
 
 function App() {
 
@@ -46,69 +46,54 @@ function App() {
   const showImagesToSelect = () => {
     return (
       <>
-        <Col className='justify-content-center d-flex md' >
+        <Col className='justify-content-center' >
           <div
             className={state.santi === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='santi'
             onClick={(e) => handleSetActive('santi')}
-            style={{
-              background: `url(${imgsanti})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          ></div>
+          >
+            <img src={imgsanti} />
+          </div>
           <span>Santi Peña</span>
         </Col>
-        <Col className='justify-content-center d-flex md' >
+        <Col className='justify-content-center' >
           <div
             className={state.efrain === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='sanefrainti'
             onClick={(e) => handleSetActive('efrain')}
-            style={{
-              background: `url(${imgefrain})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          ></div>
+          >
+            <img src={imgefrain} />
+          </div>
           <span>Efraín Alegre</span>
         </Col>
-        <Col className='justify-content-center d-flex md' >
+        <Col className='justify-content-center' >
           <div
             className={state.chila === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='chila'
             onClick={(e) => handleSetActive('chila')}
-            style={{
-              background: `url(${imgchila})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          ></div>
+          >
+            <img src={imgchila} />
+          </div>
           <span>Jose Luis Chilavert</span>
         </Col>
-        <Col className='justify-content-center d-flex md' >
+        <Col className='justify-content-center' >
           <div
             className={state.euclides === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='euclides'
             onClick={(e) => handleSetActive('euclides')}
-            style={{
-              background: `url(${imgeuclides})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          ></div>
+          >
+            <img src={imgeuclides} />
+          </div>
           <span>Euclides Acevedo</span>
         </Col>
-        <Col className='justify-content-center d-flex md' >
+        <Col className='justify-content-center' >
           <div
             className={state.payo === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='payo'
             onClick={(e) => handleSetActive('payo')}
-            style={{
-              background: `url(${imgpayo})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          ></div>
+          >
+            <img src={imgpayo} />
+          </div>
           <span>Payo Cubas</span>
         </Col>
       </>
@@ -140,6 +125,13 @@ function App() {
   }
 
   const [modalShow, setModalShow] = useState(false);
+  const [hideElements, setHideElements] = useState(false)
+
+
+  const handleModal = (e) => {
+    e.preventDefault();
+    setModalShow(true);
+  }
 
   function renderForm(data) {
     return (
@@ -214,15 +206,17 @@ function App() {
   return (
     <div className="App">
       <Container className='main' ref={nodeRef} >
-        <Row className='d-flex'>
-          <Col md={5} className=''>
+        <Row className=''>
+          <Col md={12} className='header'>
             <p className='titlehead'>Me gustaría ver datos sobre</p>
-            <select className='select candy w-100' value={select} onChange={(e) => onChangeSelect(e)} >
-              <option value="plataforma">SEGUIDORES EN PLATAFORMAS</option>
+            <select className='select candy' value={select} onChange={(e) => onChangeSelect(e)} >
+              <option value="plataforma">VOLUMEN DE MENCIONES</option>
               <option value="meta">INVERSION EN META</option>
             </select>
           </Col>
-          <Col md={7} id="itemca">
+        </Row>
+        <Row className='mt-3 mb-3'>
+          <Col md={12} id="itemca">
             <p className='titlecandidate'>Los candidatos</p>
             <Row className='selectcontainer'>
               {showImagesToSelect()}
@@ -231,7 +225,7 @@ function App() {
         </Row>
         {
           select === 'plataforma' ?
-            <Plataforma state={state} />
+            <Menciones state={state} />
             :
             <Metainfo state={state} />
         }
@@ -239,9 +233,10 @@ function App() {
           show={modalShow}
           onHide={() => setModalShow(false)}
         />
-        <Button className='mt-5' variant="primary" onClick={() => setModalShow(true)}>
-          Exportar datos
-        </Button>
+        {
+          hideElements === false ?
+            <Button className='mt-5' variant="primary" onClick={(e) => handleModal(e)}>Exportar datos</Button> : ''
+        }
       </Container>
     </div>
   )

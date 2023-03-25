@@ -45,16 +45,40 @@ const Metainfo = (props) => {
         "inversion": 90096
     }
 
-    const calcularOtros = (santi, efrain, chila, euclides, payo, filterCandidates) => {
-        const total = santi.inversion + efrain.inversion + chila.inversion + euclides.inversion + payo.inversion 
+    const calcularTotalOtros = (total, filterCandidates) => {
+
+        var resta = 0
+
+        Object.keys(filterCandidates).map((key) => {
+            switch (filterCandidates[key]) {
+                case 'santi':
+                    resta += santi.inversion
+                    break;
+                case 'efrain':
+                    resta += efrain.inversion
+                    break;
+                case 'chila':
+                    resta += chila.inversion
+                    break;
+                case 'euclides':
+                    resta += euclides.inversion
+                    break;
+                case 'payo':
+                    resta += payo.inversion
+                    break;
+                default:
+                    break;
+            }
+        })
+
+        return total - resta
+
     }
 
     const otros = {
         "candydato": "Otros",
-        "inversion": calcularOtros(santi, efrain, chila, euclides, payo, filterCandidates)
+        "inversion": calcularTotalOtros(1487995426, filterCandidates)
     }
-
-   
 
     am4core.useTheme(am4themes_animated);
 
@@ -105,7 +129,6 @@ const Metainfo = (props) => {
     pieSeries.innerRadius = am4core.percent(50);
     pieSeries.ticks.template.disabled = true;
     pieSeries.labels.template.disabled = true;
-
     let rgm = new am4core.RadialGradientModifier();
     rgm.brightnesses.push(-0.1, -0.1, -0.2, 0, - 0.2);
     pieSeries.slices.template.fillModifier = rgm;
@@ -113,17 +136,39 @@ const Metainfo = (props) => {
     pieSeries.slices.template.strokeOpacity = 0.0001;
     pieSeries.slices.template.strokeWidth = 0;
     pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0.05;
-    pieSeries.colors.list = [
-        am4core.color("#DD7969", 0.8),
-        am4core.color("#966AA7", 0.8),
-        am4core.color("#FF6F91", 0.8),
-        am4core.color("#FF9671", 0.8),
-        am4core.color("#FFC75F", 0.8),
-        am4core.color("#80D4A3", 0.8),
-    ];
 
+    const validarColores = (filterCandidates) => {
+        const colores = []
+        Object.keys(filterCandidates).map((key) => {
+            switch (filterCandidates[key]) {
+                case 'santi':
+                    colores.push(am4core.color("#DD7969", 0.8))
+                    break;
+                case 'efrain':
+                    colores.push(am4core.color("#966AA7", 0.8))
+                    break;
+                case 'chila':
+                    colores.push(am4core.color("#FF6F91", 0.8))
+                    break;
+                case 'euclides':
+                    colores.push(am4core.color("#FF9671", 0.8))
+                    break;
+                case 'payo':
+                    colores.push(am4core.color("#FFC75F", 0.8))
+                    break;
+                default:
+                    colores.push(am4core.color("#80D4A3", 0.8))
+                    break;
+            }
+        })
+
+        return colores
+
+    }
+
+    pieSeries.colors.list = validarColores(filterCandidates)
     chart.legend = new am4charts.Legend();
-    chart.legend.position = "right";
+    chart.legend.position = "bottom";
 
     //set true showData if some of the candidates is active
     useEffect(() => {
