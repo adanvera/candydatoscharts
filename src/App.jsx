@@ -113,10 +113,10 @@ function App() {
         </Col>
       </>
     )
-
-
   }
 
+
+  // function to create image from html and download
   const handleScreenshot = async () => {
     const image = await htmlToImage.toPng(nodeRef.current);
     // you can use this image in any way you want
@@ -125,6 +125,7 @@ function App() {
     saveAs(file, "image.png");
   };
 
+  // function to convert base64 to file
   const convertBase64ToFile = (base64String, fileName) => {
     let arr = base64String.split(',');
     let mime = arr[0].match(/:(.*?);/)[1];

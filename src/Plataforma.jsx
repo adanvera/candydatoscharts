@@ -5,11 +5,12 @@ import nodata from './assets/images/nodata.png'
 
 const Plataforma = (props) => {
 
+  // to show or hide component when some candidate is active or not
   const [showData, setShowData] = useState(false)
 
   const active = props?.state
 
-  // filtrar active y devolver el nombre del candidato activo
+  // filter active candidates and return the name of the active candidate
   const activeCandidates = (active) => {
     let candidates = []
     for (const key in active) {
