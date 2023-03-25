@@ -15,7 +15,6 @@ const Metainfo = (props) => {
                 candidates.push(key)
             }
         }
-
         return candidates
     }
 
@@ -46,10 +45,16 @@ const Metainfo = (props) => {
         "inversion": 90096
     }
 
+    const calcularOtros = (santi, efrain, chila, euclides, payo, filterCandidates) => {
+        const total = santi.inversion + efrain.inversion + chila.inversion + euclides.inversion + payo.inversion 
+    }
+
     const otros = {
         "candydato": "Otros",
-        "inversion": 1487995426
+        "inversion": calcularOtros(santi, efrain, chila, euclides, payo, filterCandidates)
     }
+
+   
 
     am4core.useTheme(am4themes_animated);
 
@@ -144,7 +149,7 @@ const Metainfo = (props) => {
                         />
                     </Form>
                     {
-                        !changeView && 
+                        !changeView &&
                         <div id="chartdiv"></div>
                     }{
                         changeView &&
