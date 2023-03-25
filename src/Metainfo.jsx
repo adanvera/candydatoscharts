@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Form, Row } from 'react-bootstrap'
+import { Col, Form, Row } from 'react-bootstrap'
 import nodata from './assets/images/nodata.png'
 
 const Metainfo = (props) => {
@@ -22,27 +22,32 @@ const Metainfo = (props) => {
 
     const santi = {
         "candydato": "Santi Peña",
-        "inversion": 354798249
+        "inversion": 354798249,
+        "color": "#DD7969"
     }
 
     const efrain = {
         "candydato": "Efraín Alegre",
-        "inversion": 67056894
+        "inversion": 67056894,
+        "color": "#966AA7"
     }
 
     const chila = {
         "candydato": "José Luis Chilavert",
-        "inversion": 0
+        "inversion": 0,
+        "color": "#FF6F91"
     }
 
     const euclides = {
         "candydato": "Euclides Acevedo",
-        "inversion": 12190733
+        "inversion": 12190733,
+        "color": "#FF9671"
     }
 
     const payo = {
         "candydato": "Payo Cubas",
-        "inversion": 90096
+        "inversion": 90096,
+        "color": "#FFC75F"
     }
 
     const calcularTotalOtros = (total, filterCandidates) => {
@@ -77,7 +82,8 @@ const Metainfo = (props) => {
 
     const otros = {
         "candydato": "Otros",
-        "inversion": calcularTotalOtros(1487995426, filterCandidates)
+        "inversion": calcularTotalOtros(1487995426, filterCandidates),
+        "color": "#80D4A3"
     }
 
     am4core.useTheme(am4themes_animated);
@@ -156,11 +162,11 @@ const Metainfo = (props) => {
                 case 'payo':
                     colores.push(am4core.color("#FFC75F", 0.8))
                     break;
-                default:
-                    colores.push(am4core.color("#80D4A3", 0.8))
-                    break;
             }
         })
+
+        //setea el siguiente color siempre para que el siguiente sea el color de otros
+        colores.push(am4core.color("#80D4A3", 0.8))
 
         return colores
 
@@ -179,26 +185,83 @@ const Metainfo = (props) => {
 
     const [changeView, setChangeView] = useState(false)
 
+
+    /**
+     * chart 2
+     * to show the data of the candidates in a 3d cylinder chart
+     */
+
+    // Themes begin
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Create chart instance
+    var chartTwo = am4core.create("chartdivsdre", am4charts.XYChart3D);
+    chartTwo.paddingBottom = 30;
+    chartTwo.angle = 35;
+
+    chartTwo.data = addDatatoChart(santi, efrain, chila, euclides, payo, otros, filterCandidates)
+
+    // Create axes
+    var categoryAxis = chartTwo.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "candydato";
+    categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.minGridDistance = 20;
+    categoryAxis.renderer.inside = true;
+    categoryAxis.renderer.grid.template.disabled = true;
+
+    let labelTemplate = categoryAxis.renderer.labels.template;
+    labelTemplate.rotation = -90;
+    labelTemplate.horizontalCenter = "bottom";
+    labelTemplate.verticalCenter = "middle";
+    labelTemplate.dy = 10; // moves it a bit down;
+    labelTemplate.inside = false; // this is done to avoid settings which are not suitable when label is rotated
+    
+
+    var valueAxis = chartTwo.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.renderer.grid.template.disabled = true;
+
+    // Create series
+    var seriesssss = chartTwo.series.push(new am4charts.ConeSeries());
+    seriesssss.dataFields.valueY = "inversion";
+    seriesssss.dataFields.categoryX = "candydato";
+    
+    var columnTemplate = seriesssss.columns.template;
+
+    columnTemplate.adapter.add("fill", function (fill, target) {
+        return target.dataItem.dataContext["color"];
+    })
+
+    columnTemplate.adapter.add("stroke", function (stroke, target) {
+        return target.dataItem.dataContext["color"];
+    })
+
+
+
     return (
         <>
             {
                 showData &&
                 <>
-                    <Form>
-                        <Form.Check
-                            value={changeView}
-                            onChange={() => setChangeView(!changeView)}
-                            type="switch"
-                            id="custom-switch"
-                            label="Cambiar vista de gráfico"
-                        />
-                    </Form>
+                    <Row className='rowswitch'>
+                        <Col className='colswitch'>
+                            <Form>
+                                <Form.Check
+                                    value={changeView}
+                                    onChange={() => setChangeView(!changeView)}
+                                    type="switch"
+                                    id="custom-switch"
+                                    label="Cambiar vista de gráfico"
+                                />
+                            </Form>
+                        </Col>
+                    </Row>
                     {
                         !changeView &&
                         <div id="chartdiv"></div>
                     }{
                         changeView &&
-                        <div>otra vista</div>
+                        <div id="chartdivsdre" className='mt-5'></div>
                     }
                 </>
             }

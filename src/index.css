@@ -50,10 +50,18 @@ body {
   margin: auto;
 }
 
+#chartdivsdre{
+  width: 60%;
+  height: 300px;
+  margin: auto;
+}
 
-.chartdiv {
+
+#chartdiv {
   z-index: 1;
 }
+
+
 
 #otherChart {
   width: 100%;
@@ -238,4 +246,10 @@ p.titlecandidate {
 .justify-content-center.col {
   text-align: center;
   display: grid;
+}
+
+.rowswitch.row {
+  text-align: -webkit-center;
+  margin-top: 3rem;
+  margin-bottom: 0.1rem;
 }

@@ -59,7 +59,7 @@ function App() {
         <Col className='justify-content-center' >
           <div
             className={state.efrain === 'is-active' ? 'candydata is-active' : 'candydata'}
-            id='sanefrainti'
+            id='efrain'
             onClick={(e) => handleSetActive('efrain')}
           >
             <img src={imgefrain} />
@@ -74,7 +74,7 @@ function App() {
           >
             <img src={imgchila} />
           </div>
-          <span>Jose Luis Chilavert</span>
+          <span>Jose Chilavert</span>
         </Col>
         <Col className='justify-content-center' >
           <div

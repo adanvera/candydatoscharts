@@ -44,6 +44,8 @@ const Menciones = (props) => {
   var chart = am4core.create("chartdiv", am4charts.XYChart);
   chart.paddingRight = 20;
 
+
+
   const calcularOtros = (total, one, two, three, four, five, filterCandidates) => {
 
     var resta = 0
@@ -74,7 +76,6 @@ const Menciones = (props) => {
   }
 
   function validateData(data, filterCandidates) { }
-
 
   // Add data
   chart.data = [
@@ -408,7 +409,6 @@ const Menciones = (props) => {
   one.fillOpacity = 0.5;
   one.segments.template.fillModifier = fillModifier;
 
-
   // add series two
   var two = chart.series.push(new am4charts.LineSeries());
   two.dataFields.valueY = 'Efrain Alegre';
@@ -474,8 +474,16 @@ const Menciones = (props) => {
   others.segments.template.fillModifier = fillModifier;
 
   chart.legend = new am4charts.Legend();
-  chart.legend.position = "bottom";
-  chart.legend.scrollable = true;
+  chart.legend.useDefaultMarker = true;
+  chart.legend.color = "#fff";
+  var marker = chart.legend.markers.template.children.getIndex(0);
+  marker.cornerRadius(12, 12, 12, 12);
+  marker.strokeWidth = 2;
+  marker.strokeOpacity = 1;
+  marker.stroke = am4core.color("#ccc");
+
+  chart.cursor = new am4charts.XYCursor();
+  chart.cursor.maxTooltipDistance = 0;
 
   return (
     <>
