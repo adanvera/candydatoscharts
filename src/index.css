@@ -1,0 +1,131 @@
+/*
+import a font from folder src/assets/fonts
+*/
+@font-face {
+  font-family: 'BheltVol02-Regular';
+  src: url('./assets/BheltVol02-Regular.ttf');
+}
+
+.main {
+  background-color: #ffffff;
+  border: 1px solid black;
+  height: auto;
+  min-width:100%;
+  border-radius: 21px;
+  padding: 30px;
+}
+
+p.titlehead {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: start;
+  margin: 0;
+  color: #5E5CA5;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+#chartdiv {
+  width: 100%;
+  height: 400px;
+  margin: auto;
+}
+
+
+.chartdiv {
+  z-index: 1;
+}
+
+div#infoselect {
+  text-align: start;
+}
+
+.d-flex {
+  display: flex;
+}
+
+select.select.candy.w-100 {
+  background: none;
+  color: #C56E9B;
+  border: none;
+  height: 40px;
+  font-weight: 800;
+  font-family: 'BheltVol02-Regular';
+}
+
+.focus-only:focus {
+  outline: 2px solid black;
+}
+
+.focus-visible-only:focus-visible {
+  outline: 4px dashed darkorange;
+}
+
+.ordersection {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlecandidate {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: #121212;
+}
+
+.col-md-6 {
+  text-align: start;
+}
+
+
+/**/
+
+.candydata {
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+  background-position: center;
+  border-radius: 100%;
+}
+
+.selectcontainer.row {
+  justify-content: space-between;
+  background-color: white;
+  min-height: 75px ;
+  align-items: center;
+}
+
+.justify-content-center.d-flex.col-md-1 span {
+  color: white;
+  font-size: 7px;
+}
+
+div#itemca {
+  text-align: start;
+}
+
+
+.justify-content-center.d-flex.md.col span {
+  color: white;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 11px;
+  font-size: 7px;
+  color: #5E5CA5;
+  font-weight: 900;
+}
+
+.is-active{
+  border: 2px solid #fbbc04;
+}
