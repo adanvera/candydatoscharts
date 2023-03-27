@@ -30,6 +30,12 @@ const RedesData = (props) => {
     // Create chart instance
     var chart = am4core.create("chartdiv", am4charts.XYChart);
 
+    // reload chart when window resize
+    window.addEventListener("resize", function () {
+        chart.invalidateRawData();
+    });
+    
+
     // add fill color gradient to chart
 
     var fillModifier = new am4core.LinearGradientModifier();
@@ -663,9 +669,6 @@ const RedesData = (props) => {
     payotk.tooltipText = "Payo Cubas"
     // add fill gradient to series
     payotk.fillOpacity = 0.04
-
-
-
 
     //add a dot bullet to the series
     var bullet = payotk.bullets.push(new am4charts.CircleBullet());
