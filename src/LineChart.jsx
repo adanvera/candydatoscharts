@@ -182,12 +182,7 @@ const LineChart = (props) => {
             {
                 showData &&
                 <>
-                    {
-                        download &&  <CSVLink data={chart.data}  className='mt-2 mb-2'>descargar csv</CSVLink >
-                    }
-                    <div className='mt-3 mb-3' id="chartdivtwoss">
-
-                    </div>
+                    <div className='mt-3 mb-3' id="chartdivtwoss"></div>
                 </>
 
             }

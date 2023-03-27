@@ -3,7 +3,6 @@ import { Col, Form, Row } from 'react-bootstrap'
 import nodata from './assets/images/nodata.png'
 import LineChartMenciones from './LineChartMenciones'
 import PieMenciones from './PieMenciones'
-import { CSVLink, CSVDownload } from "react-csv";
 
 const Menciones = (props) => {
 
