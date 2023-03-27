@@ -570,3 +570,30 @@ button.btnnn.btn.btn-primary{
   justify-content: center;
   align-items: center;
 }
+
+.MuiDialogActions-root.MuiDialogActions-spacing.emete.css-14b29qc {
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.MuiDialogActions-root.MuiDialogActions-spacing.emete.css-14b29qc {
+  text-align: center !important;
+  justify-content: center !important;
+  margin-top: 40px !important;
+  border-top: 1px solid #efe5e5 !important;
+}
+
+.MuiDialogActions-root.MuiDialogActions-spacing.emete.css-14b29qc {
+  display: revert !important;
+  margin-top: 2rem  !important;
+  border-top: 1px solid #efe5e5 !important;
+  margin-top: 40px !important;
+}
+
+.css-14b29qc {
+  text-align: center !important;
+  justify-content: center !important;
+  margin-top: 40px !important;
+  border-top: 1px solid #efe5e5 !important;
+}

@@ -314,7 +314,7 @@ const App = (props) => {
             <form>
               {
                 !dataSended &&
-                <Grid container spacing={8}>
+                <Grid container spacing={2}>
                   <Grid item xs={12} md={6}>
                     <TextField
                       className='input'
@@ -373,10 +373,10 @@ const App = (props) => {
               }
             </form>
             <DialogActions className='emete'>
-              <Button className='btnnn' onClick={handleClose}>Cerrar</Button>
+              <Button className='btnnn mt-3' onClick={handleClose}>Cerrar</Button>
               {
                 !dataSended &&
-                <Button className='btnnn' onClick={handleSubmit} autoFocus>
+                <Button className='btnnn mt-3' onClick={handleSubmit} autoFocus>
                   REGISTRARSE
                 </Button>
               }
