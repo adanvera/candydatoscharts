@@ -15,6 +15,7 @@ const Metainfo = (props) => {
 
     const [showData, setShowData] = useState(false)
     const active = props?.state
+    const download = props?.download
 
     // filtrar active y devolver el nombre del candidato activo
     const activeCandidates = (active) => {
@@ -40,9 +41,9 @@ const Metainfo = (props) => {
 
     function renderCharts(data) {
         if (data === false) {
-            return <LineChart state={active} />
+            return <LineChart state={active} download={download} />
         } if (data === true) {
-            return <Pie state={active} />
+            return <Pie state={active} download={download} />
         }
     }
 

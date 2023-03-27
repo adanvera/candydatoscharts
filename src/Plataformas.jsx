@@ -19,6 +19,7 @@ const Plataformas = (props) => {
 
     const [state, setState] = useState(intialState);
     const [showData, setShowData] = useState(false)
+    const download = props?.download
 
     const active = props?.state
 
@@ -99,7 +100,7 @@ const Plataformas = (props) => {
 
     const renderRedesData = (data) => {
         return (
-            <RedesData state={active} redes={redes} />
+            <RedesData state={active} redes={redes} download={download} />
         )
     }
 

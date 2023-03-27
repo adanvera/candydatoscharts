@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { CSVLink } from 'react-csv'
 
 const RedesData = (props) => {
 
 
     const active = props?.state
     const [showData, setShowData] = useState(false)
+    const download = props?.download
 
     // filtrar active y devolver el nombre del candidato activo
     const activeCandidates = (active) => {
@@ -729,8 +731,13 @@ const RedesData = (props) => {
                                 </Col>
                             </Row>
                             {
-                                (showData ) &&
-                                <div id="chartdiv" ></div>
+                                (showData) &&
+                                <>
+                                    {
+                                        download && <CSVLink data={chart.data} className='mt-2 mb-2'>descargar csv</CSVLink >
+                                    }
+                                    <div id="chartdiv" ></div>
+                                </>
                             }
                         </>
                     }

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { CSVLink } from 'react-csv'
 
 const LineChart = (props) => {
 
     const active = props?.state
+    const download = props?.download
 
     // filtrar active y devolver el nombre del candidato activo
     const activeCandidates = (active) => {
@@ -21,35 +23,30 @@ const LineChart = (props) => {
         "candydato": "Santi Peña",
         "inversion": 354798249,
         "color": "#DD7969",
-        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/santi_ico.png"
     }
 
     const efrain = {
         "candydato": "Efraín Alegre",
         "inversion": 67056894,
         "color": "#966AA7",
-        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/chila_ico.png"
     }
 
     const chila = {
         "candydato": "José Luis Chilavert",
         "inversion": 0,
         "color": "#FF6F91",
-        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/chiiilllaaa.png"
     }
 
     const euclides = {
         "candydato": "Euclides Acevedo",
         "inversion": 12190733,
         "color": "#FF9671",
-        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/euclides-ico.png"
     }
 
     const payo = {
         "candydato": "Payo Cubas",
         "inversion": 90096,
         "color": "#FFC75F",
-        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/payo_ico.png"
     }
 
     const calcularTotalOtros = (total, filterCandidates) => {
@@ -183,7 +180,16 @@ const LineChart = (props) => {
     return (
         <>
             {
-                showData && <div className='mt-3 mb-3' id="chartdivtwoss"></div>
+                showData &&
+                <>
+                    {
+                        download &&  <CSVLink data={chart.data}  className='mt-2 mb-2'>descargar csv</CSVLink >
+                    }
+                    <div className='mt-3 mb-3' id="chartdivtwoss">
+
+                    </div>
+                </>
+
             }
         </>
     )

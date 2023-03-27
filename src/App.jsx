@@ -1,5 +1,5 @@
 import './App.css'
-import { Button, Col, Container, Form, Modal, Row } from 'react-bootstrap'
+import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import Metainfo from './Metainfo'
 import { useEffect, useRef, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +13,10 @@ import { saveAs } from 'file-saver';
 import logo from './assets/images/logo.png'
 import Menciones from './Menciones';
 import Plataformas from './Plataformas';
-
+import { Box, DialogActions, Grid, IconButton, MenuItem, Modal, Select, TextField, Typography } from '@mui/material';
+import { Dialog } from '@mui/material';
+import axios from 'axios';
+import check from './assets/images/icos/success.png'
 
 const App = (props) => {
 
@@ -43,6 +46,8 @@ const App = (props) => {
       setState({ ...state, [data]: 'is-active' })
     }
   }
+
+  const [download, setDownload] = useState(false)
 
   // function show responsive images to select candidate 
   const showImagesToSelect = () => {
@@ -107,7 +112,7 @@ const App = (props) => {
       </>
     )
   }
-  
+
   // function to create image from html and download
   const handleScreenshot = async () => {
     const image = await htmlToImage.toJpeg(nodeRef.current)
@@ -135,93 +140,73 @@ const App = (props) => {
   const [modalShow, setModalShow] = useState(false);
   const [hideElements, setHideElements] = useState(false)
 
-
   const handleModal = (e) => {
     e.preventDefault();
     setHideElements(true)
+    setOpen(true)
     setModalShow(true);
   }
 
   useEffect(() => {
-    if (modalShow) {
+    if (open) {
       setHideElements(true)
     } else {
       setHideElements(false)
     }
   }, [modalShow, hideElements])
 
-  function renderForm(data) {
-    return (
-      <Form>
-        <Row className='formSendData'>
-          <Col>
-            <Form.Label>Nombre y apellido</Form.Label>
-            <Form.Group className="mb-3" controlId="forName" required>
-              <Form.Control type="text" required />
-            </Form.Group>
-          </Col>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Correo electrónico:</Form.Label>
-              <Form.Control type="email" placeholder="" required />
-            </Form.Group>
-          </Col>
-        </Row>
-        <Row className='formSendData'>
-          <Col>
-            <Form.Label>Telefono</Form.Label>
-            <Form.Group className="mb-3" controlId="forPgone" required>
-              <Form.Control type="text" required />
-            </Form.Group>
-          </Col>
-          <Col>
-            <Form.Label>Tipo de uso:</Form.Label>
-            <Form.Select aria-label="Default select example">
-              <option value="1">Investigación</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </Form.Select>
-          </Col>
-        </Row>
-        <Modal.Footer className='mt-4'>
-          <Button className='regBtn' variant="primary" type="submit">
-            REGISTRARSE
-          </Button>
-        </Modal.Footer>
+  // submit event
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (user.name === '' || user.mail === '' || user.phone === '' || user.uso === '') {
+      alert('Completa todos los campos')
+      return
+    }
 
-      </Form>
-    )
+    const data = {
+      name: user.name,
+      email: user.email,
+      phone: user.phone,
+      uso: user.uso,
+    }
+
+    axios.post('https://sheet.best/api/sheets/d27a800a-841d-42e0-bd2b-de627f0f9993', data).then(response => {
+      console.log(response);
+      setName('');
+      setAge('');
+      setDesignation('');
+      setSalary('');
+    })
+
+    setDataSended(true)
+    setDownload(true)
+
   }
 
-  function ModalExport(props) {
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-        </Modal.Header>
-        <Modal.Body>
-          <div>
-            <img src={logo} alt='logo' />
-          </div>
-          <h4>EXPORTA LA COMPARACIÓN</h4>
-          <p>
-            Descarga ahora como <span onClick={handleScreenshot} className='clickeed'>JPG</span>
-          </p>
-          <div className='separador'></div>
-          <p>Registrate para descargar los datos</p>
-          <p>en formato CSV/Excel</p>
-          {renderForm(props.onHide)}
-        </Modal.Body>
-      </Modal>
-    );
+  const userState = {
+    name: '',
+    email: '',
+    phone: '',
+    uso: '',
   }
+
+  const [user, setUser] = useState(userState)
+  const [dataSended, setDataSended] = useState(false)
+
+  const handleChange = (e) => {
+    setUser(prevState => {
+      const updatedValues = {
+        ...prevState,
+        [e.target.name]: e.target.value,
+      }
+      return { ...updatedValues };
+    });
+  }
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
 
   const renderButton = (hide, modal) => {
-    // <Button className='mt-5' variant="primary" onClick={(e) => handleModal(e)}>Exportar datos</Button> : ''
     if (hide === true && modal === true) {
       return (
         <div>
@@ -230,6 +215,28 @@ const App = (props) => {
       )
     } else return <Button className='mt-5 pulse' variant="primary" onClick={(e) => handleModal(e)}>Exportar datos</Button>
   }
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 800,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+
+  const handleClose = (event, reason) => {
+    event.preventDefault()
+    setHideElements(false)
+    if (reason !== 'backdropClick') {
+      setOpen(false)
+    }
+  }
+
+
 
   return (
     <div className="App">
@@ -271,22 +278,111 @@ const App = (props) => {
         </Row>
         {
           select === 'plataforma' &&
-          <Menciones state={state} />
+          <Menciones state={state} download={dataSended} />
         }
         {
           select === 'seguidores' &&
-          <Plataformas state={state} />
+          <Plataformas state={state} download={dataSended} />
         }
         {
           select === 'meta' &&
-          <Metainfo state={state} />
+          <Metainfo state={state} download={dataSended} />
         }
-        <ModalExport
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-          // no close when click outside
-          backdrop="static"
-        />
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+          disableBackdropClick={true}
+        >
+          <Box sx={style}>
+            <div>
+              <img src={logo} alt='logo' />
+            </div>
+            <h4>EXPORTA LA COMPARACIÓN</h4>
+            <p>
+              Descarga ahora como <span onClick={handleScreenshot} className='clickeed'>JPG</span>
+            </p>
+            <div className='separador'></div>
+            {
+              !dataSended &&
+              <>
+                <p>Registrate para descargar los datos</p>
+                <p>en formato CSV/Excel</p>
+              </>
+            }
+            <form>
+              {
+                !dataSended &&
+                <Grid container spacing={8}>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      className='input'
+                      id="outlined-basic"
+                      label="Nombre"
+                      variant="outlined"
+                      name='name'
+                      value={user.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      className='input'
+                      id="outlined-basic"
+                      label="Email"
+                      variant="outlined"
+                      name='email'
+                      value={user.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      className='input'
+                      id="outlined-basic"
+                      label="Teléfono"
+                      variant="outlined"
+                      name='phone'
+                      value={user.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <label>¿Para qué lo vas a usar?</label>
+                    <Select className='input' name='uso' value={user.uso} onChange={handleChange} required>
+                      <MenuItem value='prensa'>Para publicar en prensa.</MenuItem>
+                      <MenuItem value='analisispersonal'>Para analizar por mi cuenta los datos.</MenuItem>
+                    </Select>
+                  </Grid>
+                </Grid>
+              }
+              {
+                dataSended &&
+                <div>
+                  <div className='successmsg' >
+                    <span>Registro exitoso</span>
+                  </div>
+                  <div>
+                    <img src={check} alt='check' />
+                  </div>
+                </div>
+              }
+            </form>
+            <DialogActions className='emete'>
+              <Button className='btnnn' onClick={handleClose}>Cerrar</Button>
+              {
+                !dataSended &&
+                <Button className='btnnn' onClick={handleSubmit} autoFocus>
+                  REGISTRARSE
+                </Button>
+              }
+            </DialogActions>
+          </Box>
+        </Modal>
         {
           renderButton(hideElements, modalShow)
         }

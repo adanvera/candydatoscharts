@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { CSVLink } from 'react-csv'
 
 const LineChartMenciones = (props) => {
     // to show or hide component when some candidate is active or not
     const [showData, setShowData] = useState(false)
+
+    const download = props?.download
 
     const active = props?.state
 
@@ -519,7 +522,13 @@ const LineChartMenciones = (props) => {
         <>
             {
                 showData &&
-                <div id="chartdiv"></div>
+                <>  
+                   {
+                    download &&
+                    <CSVLink data={chart.data}  className='mt-2 mb-2'>descargar csv</CSVLink >
+                   }
+                    <div id="chartdiv"></div>
+                </>
             }
         </>
     )

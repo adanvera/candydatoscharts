@@ -3,11 +3,14 @@ import { Col, Form, Row } from 'react-bootstrap'
 import nodata from './assets/images/nodata.png'
 import LineChartMenciones from './LineChartMenciones'
 import PieMenciones from './PieMenciones'
+import { CSVLink, CSVDownload } from "react-csv";
 
 const Menciones = (props) => {
 
   const [showData, setShowData] = useState(false)
   const active = props?.state
+
+  const download = props?.download
 
   // filtrar active y devolver el nombre del candidato activo
   const activeCandidates = (active) => {
@@ -33,9 +36,9 @@ const Menciones = (props) => {
 
   const changeViewChart = (data) => {
     if (data === false) {
-      return <LineChartMenciones state={active} />
+      return <LineChartMenciones state={active} download={download} />
     } else {
-      return <PieMenciones state={active} />
+      return <PieMenciones state={active} download={download} />
     }
   }
 

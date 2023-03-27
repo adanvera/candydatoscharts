@@ -257,7 +257,6 @@ span.clickeed {
 
 .separador {
   border-top: 1px solid #E8E8E8;
-  width: 25%;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -542,4 +541,32 @@ button.mt-5.btn.btn-primary:hover {
   animation: pulse 1s;
   box-shadow: 0 0 0 2em transparent;
   transform: scale(1.1);
+}
+
+.MuiBox-root.css-1l9ohcm {
+  text-align: center;
+}
+
+.MuiDialogActions-root.MuiDialogActions-spacing.css-hlj6pa-MuiDialogActions-root {
+  justify-content: center;
+  border-top: 1px solid rgb(211, 211, 211);
+}
+
+button.btnnn.btn.btn-primary{
+  background: #FFFFFF;
+  border: 1px solid #5E5CA5;
+  border-radius: 5px;
+  color: #5E5CA5;
+  margin-left: 15px;
+}
+
+
+.MuiDialogActions-root.MuiDialogActions-spacing.emete.css-hlj6pa-MuiDialogActions-root {
+  margin-top: 2rem;
+}
+
+.successmsg {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }

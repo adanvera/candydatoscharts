@@ -4,11 +4,13 @@ import imgefrain from './assets/images/candydatos/efrain-1.png'
 import imgchila from './assets/images/candydatos/chila.png'
 import imgeuclides from './assets/images/candydatos/euclides-1.png'
 import imgpayo from './assets/images/candydatos/payocubas.png'
+import { CSVLink } from 'react-csv'
 
 
 const Pie = (props) => {
 
     const active = props?.state
+    const download = props?.download
 
     // filtrar active y devolver el nombre del candidato activo
     const activeCandidates = (active) => {
@@ -195,7 +197,13 @@ const Pie = (props) => {
     return (
         <>
             {
-                showData && <div id="chartdiv"></div>
+                showData &&
+                <>
+                    {
+                        download && <CSVLink data={chart.data} className='mt-2 mb-2'>descargar csv</CSVLink >
+                    }
+                    <div id="chartdiv"></div>
+                </>
             }
         </>
     )
