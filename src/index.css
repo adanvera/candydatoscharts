@@ -16,12 +16,10 @@ import a font from folder src/assets/fonts
   border-radius: 21px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Nunito Sans', sans-serif;
-
 }
 
 p.titlehead {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans';
   font-size: 20px;
   font-weight: 700;
   line-height: 27px;
@@ -29,7 +27,7 @@ p.titlehead {
   text-align: center;
   margin: 0;
   color: #5E5CA5;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
@@ -37,17 +35,22 @@ p.titlehead {
   text-transform: uppercase;
 }
 
-html {
+html * {
   /* background: #ECEDFB; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Nunito Sans' !important;
+  font-family: Nunito;
 }
 
+/*  */
+
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans';
   /* background: #ECEDFB; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Nunito Sans' !important;
 }
 
 
@@ -147,7 +150,7 @@ select.select.candy.meta.form-select {
 }
 
 .titlecandidate {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
@@ -170,7 +173,7 @@ select.select.candy.meta.form-select {
   background-position: center;
   border-radius: 100%;
   opacity: 0.6;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans' !important;
   font-size: 14px;
   font-weight: 700;
   line-height: 15px;
@@ -187,21 +190,22 @@ select.select.candy.meta.form-select {
   line-height: 15px;
   letter-spacing: 0em;
   text-align: center;
-  font-family: 'Nunito Sans Bold', sans-serif;
+  font-family: 'Nunito Sans' !important;
 }
 
 .justify-content-center.active-text.col span {
-  font-family: 'Nunito Sans Bold', sans-serif;
+  font-family: 'Nunito Sans' !important;
   font-weight: 700;
 }
 
 .chila {
   display: grid;
   font-size: 14px;
+  font-family: 'Nunito Sans' !important;
 }
 
 .chila span {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans' !important;
   font-size: 14px;
   font-weight: 700;
   line-height: 15px;
@@ -259,7 +263,7 @@ div#itemca {
 }
 
 span.clickeed {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans' !important;
   font-style: normal;
   font-weight: 400;
   line-height: 27px;
@@ -285,7 +289,7 @@ span.clickeed {
 
 
 button.btn.btn-primary {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans' !important;
   height: 49px;
   left: 649px;
   top: 869px;
@@ -345,7 +349,7 @@ p.titlecandidate {
 }
 
 .justify-content-center.active-text.col span {
-  font-family: 'Nunito Sans Bold', sans-serif;
+  font-family: 'Nunito Sans' !important;
   opacity: 1;
   color: #5E5CA5;
 }
@@ -395,7 +399,7 @@ p.seleccionarred {
   border: none;
   height: 40px;
   font-weight: 900;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans' !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
@@ -652,11 +656,89 @@ select.select.candy.meta.form-select {
 }
 
 @media only screen and (max-width: 600px) {
-  .main.container{
+  .main.container {
     /* background-color: red; */
   }
-  div#root{
+
+  div#root {
     padding: 0.5rem;
     margin: 0.1rem;
   }
+}
+
+.justify-content-center.col .candydata {
+  border: 1px solid #d3d3d3;
+  font-family: 'Nunito Sans' !important;
+}
+
+p.titlecandidate {
+  font-family: 'BheltVol02-Regular' !important;
+  font-weight: 100;
+}
+
+p.titlehead {
+  font-family: 'BheltVol02-Regular' !important;
+  font-weight: 100;
+}
+
+/* font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 22px;
+text-transform: uppercase;
+color: #121212; */
+
+select.select.candy.plataforma.form-select {
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+select.select.candy.plataforma.form-select option.seguidores {
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+select.select.candy.plataforma.form-select option.plataforma {
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+select.select.candy.plataforma.form-select option.meta {
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+select.select.candy.meta.form-select{
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+select.select.candy.seguidores.form-select{
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+option.plataforma{
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+option.seguidores{
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+option.meta{
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
 }
