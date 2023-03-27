@@ -107,8 +107,7 @@ const App = (props) => {
       </>
     )
   }
-
-
+  
   // function to create image from html and download
   const handleScreenshot = async () => {
     const image = await htmlToImage.toJpeg(nodeRef.current)
@@ -150,29 +149,6 @@ const App = (props) => {
       setHideElements(false)
     }
   }, [modalShow, hideElements])
-
-  console.log(modalShow);
-
-  // const transporter = nodemailer.createTransport({
-  //   host: 'smtp.ethereal.email',
-  //   port: 465,
-  //   secure: false,
-  //   auth: {
-  //     user: 'candydatos@wumla.com',
-  //     pass: 'p=kw-sR2XUKx',
-  //   },
-  // });
-
-  // const emailHtml = render(<Email url="https://example.com" />);
-
-
-  //   Username:	candydatos@wumla.com
-  //   Password: p = kw - sR2XUKx
-  // Incoming Server: mail.wumla.com
-  // 		IMAP Port: 993 POP3 Port: 995
-  // Outgoing Server: mail.wumla.com
-  // 		SMTP Port: 465
-  //   IMAP, POP3, and SMTP require authentication.
 
   function renderForm(data) {
     return (

@@ -34,7 +34,7 @@ const RedesData = (props) => {
     window.addEventListener("resize", function () {
         chart.invalidateRawData();
     });
-    
+
 
     // add fill color gradient to chart
 
@@ -681,6 +681,9 @@ const RedesData = (props) => {
     chart.scrollbarX.parent = chart.bottomAxesContainer;
     chart.scrollbarX.toBack();
 
+    setTimeout(() => {
+        setShowData(true);
+    }, 2500);
 
     const renderData = (redesValidation, dataValidation) => {
         if (redesValidation && dataValidation) {
@@ -726,7 +729,7 @@ const RedesData = (props) => {
                                 </Col>
                             </Row>
                             {
-                                showData &&
+                                (showData ) &&
                                 <div id="chartdiv" ></div>
                             }
                         </>
