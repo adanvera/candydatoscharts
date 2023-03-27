@@ -571,6 +571,29 @@ tspan {
     margin-top: 10px;
   }
 
+
+  div#chartdivtwoss {
+    padding: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .main.container div#chartdivtwoss {
+    padding: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .container-fluid {
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  .nodata.row img {
+    width: 50%;
+    height: 50%;
+  }
+
 }
 
 button.mt-5.btn.btn-primary:hover {
@@ -664,6 +687,18 @@ select.select.candy.meta.form-select {
     padding: 0.5rem;
     margin: 0.1rem;
   }
+
+  div#chartdivtwoss {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nodata.row img {
+    width: 50%;
+    height: 50%;
+  }
+
 }
 
 .justify-content-center.col .candydata {
@@ -713,31 +748,31 @@ select.select.candy.plataforma.form-select option.meta {
   text-transform: uppercase;
 }
 
-select.select.candy.meta.form-select{
+select.select.candy.meta.form-select {
   font-style: normal;
   font-weight: 900;
   text-transform: uppercase;
 }
 
-select.select.candy.seguidores.form-select{
+select.select.candy.seguidores.form-select {
   font-style: normal;
   font-weight: 900;
   text-transform: uppercase;
 }
 
-option.plataforma{
+option.plataforma {
   font-style: normal;
   font-weight: 900;
   text-transform: uppercase;
 }
 
-option.seguidores{
+option.seguidores {
   font-style: normal;
   font-weight: 900;
   text-transform: uppercase;
 }
 
-option.meta{
+option.meta {
   font-style: normal;
   font-weight: 900;
   text-transform: uppercase;
