@@ -29,6 +29,12 @@ p.titlehead {
   text-align: center;
   margin: 0;
   color: #5E5CA5;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
 }
 
 html {
@@ -108,10 +114,12 @@ option.meta {
 
 select.select.candy.plataforma.form-select {
   color: #E58253;
+  font-size: 14px;
 }
 
 select.select.candy.seguidores.form-select {
   color: #5E5CA5;
+  font-size: 14px;
 }
 
 
@@ -174,12 +182,17 @@ select.select.candy.meta.form-select {
 
 .justify-content-center.col span {
   opacity: 0.6;
-  font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 15px;
   letter-spacing: 0em;
   text-align: center;
+  font-family: 'Nunito Sans Bold', sans-serif;
+}
+
+.justify-content-center.active-text.col span{
+  font-family: 'Nunito Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .chila {
@@ -332,7 +345,7 @@ p.titlecandidate {
 }
 
 .justify-content-center.active-text.col span {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans Bold', sans-serif;
   opacity: 1;
   color: #5E5CA5;
 }
@@ -371,6 +384,11 @@ div#listfilter {
 
 .redeslist.row .col:hover {
   filter: grayscale(0%);
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  transition: all 0.4s ease;
+  transform: scale(1.1);
 }
 
 p.seleccionarred {
@@ -505,31 +523,36 @@ tspan {
     color: #E58253;
     font-size: 10px;
   }
-  
+
   option.seguidores {
-    color: #5E5CA5;font-size: 10px;
+    color: #5E5CA5;
+    font-size: 10px;
   }
-  
+
   option.meta {
-    color: #C56E9B;font-size: 10px;
+    color: #C56E9B;
+    font-size: 10px;
   }
-  
+
   select.select.candy.plataforma.form-select {
-    color: #E58253;font-size: 10px;
+    color: #E58253;
+    font-size: 10px;
   }
-  
+
   select.select.candy.seguidores.form-select {
-    color: #5E5CA5;font-size: 10px;
+    color: #5E5CA5;
+    font-size: 10px;
   }
-  
-  
+
+
   select.select.candy.meta.form-select {
-    color: #C56E9B;font-size: 10px;
+    color: #C56E9B;
+    font-size: 10px;
   }
-  
+
   .justify-content-center.active-text.col span {
     font-size: 10px;
-}
+  }
 
 }
 
@@ -552,7 +575,7 @@ button.mt-5.btn.btn-primary:hover {
   border-top: 1px solid rgb(211, 211, 211);
 }
 
-button.btnnn.btn.btn-primary{
+button.btnnn.btn.btn-primary {
   background: #FFFFFF;
   border: 1px solid #5E5CA5;
   border-radius: 5px;
@@ -586,7 +609,7 @@ button.btnnn.btn.btn-primary{
 
 .MuiDialogActions-root.MuiDialogActions-spacing.emete.css-14b29qc {
   display: revert !important;
-  margin-top: 2rem  !important;
+  margin-top: 2rem !important;
   border-top: 1px solid #efe5e5 !important;
   margin-top: 40px !important;
 }
@@ -596,4 +619,21 @@ button.btnnn.btn.btn-primary{
   justify-content: center !important;
   margin-top: 40px !important;
   border-top: 1px solid #efe5e5 !important;
+}
+
+.col-md-5 select.select.candy.plataforma.form-select {
+  border: 1px solid #e1e1e1;
+}
+
+.row p.titlehead {
+  padding-bottom: 10px;
+}
+
+select.select.candy.seguidores.form-select {
+  border: 1px solid #5e5ca533;
+}
+
+select.select.candy.meta.form-select{
+  border: 1px solid #c56e9b33;
+  font-size: 14px;
 }

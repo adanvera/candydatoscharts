@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { CSVLink } from 'react-csv'
+import nodata from './assets/images/nodata.png'
+
 
 const RedesData = (props) => {
 
@@ -731,6 +733,12 @@ const RedesData = (props) => {
                                 </Col>
                             </Row>
                             {
+                                redesValidation === false &&
+                                <div className='nodatared'>
+                                    <img src={nodata} alt='loading' />
+                                </div>
+                            }
+                            {
                                 (showData) &&
                                 <>
                                     <div id="chartdiv" ></div>
@@ -742,9 +750,11 @@ const RedesData = (props) => {
             )
         } else {
             return (
-                <div className="no-data">
-                    <p className='seleccionarred'>seleccionar red social</p>
-                </div>
+                <Row className="nodata">
+                    <img
+                        src={nodata}
+                    />
+                </Row>
             )
         }
     }

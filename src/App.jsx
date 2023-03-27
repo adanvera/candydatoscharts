@@ -244,7 +244,7 @@ const App = (props) => {
         <Row className=''>
           <Col md={12} className='header'>
             <Row>
-              <p className='titlehead'>Me gustaría ver datos sobre</p>
+              <p className='titlehead'>ver datos sobre</p>
             </Row>
             <Row className='justify-content-center'>
               <Col md={5}>
@@ -268,7 +268,7 @@ const App = (props) => {
           <Col md={12} id="itemca">
             {
               modalShow === false &&
-              <p className='titlecandidate'>Los candidatos</p>
+              <p className='titlecandidate'>Seleccionar candidatos</p>
             }
 
             <Row className='selectcontainer'>
