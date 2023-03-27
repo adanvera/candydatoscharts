@@ -202,10 +202,6 @@ const PieMenciones = (props) => {
             {
                 showData &&
                 <>
-                    {
-                        download &&
-                        <CSVLink data={chart.data} className='mt-2 mb-2'>descargar csv</CSVLink >
-                    }
                     <div id="chartdiv"></div>
                 </>
 
