@@ -236,14 +236,12 @@ const App = (props) => {
     }
   }
 
-
-
   return (
     <div className="App">
       <Container className='main' ref={nodeRef} >
         <Row className=''>
           <Col md={12} className='header'>
-            <Row>
+            <Row className='tophead'>  
               <p className='titlehead'>ver datos sobre</p>
             </Row>
             <Row className='justify-content-center'>

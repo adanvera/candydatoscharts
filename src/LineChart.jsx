@@ -168,6 +168,11 @@ const LineChart = (props) => {
     scrollbarX.series.push(series);
     chart.scrollbarX = scrollbarX;
 
+    // change chart font family to Nunito Sans
+    chart.fontFamily = "Nunito Sans";
+    chart.fontSize = 12;
+    chart.fontWeight = "bold";
+
     const [showData, setShowData] = useState(false)
 
     //set true showData if some of the candidates is active

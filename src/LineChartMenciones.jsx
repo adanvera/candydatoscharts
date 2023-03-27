@@ -518,11 +518,16 @@ const LineChartMenciones = (props) => {
     chart.scrollbarX.parent = chart.bottomAxesContainer;
     chart.scrollbarX.toBack();
 
+    // change chart font family to Nunito Sans
+    chart.fontFamily = "Nunito Sans";
+    chart.fontSize = 12;
+    chart.fontWeight = "bold";
+
     return (
         <>
             {
                 showData &&
-                <>  
+                <>
                     <div id="chartdiv"></div>
                 </>
             }

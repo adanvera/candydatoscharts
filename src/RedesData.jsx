@@ -685,6 +685,11 @@ const RedesData = (props) => {
     chart.scrollbarX.parent = chart.bottomAxesContainer;
     chart.scrollbarX.toBack();
 
+    // change chart font family to Nunito san bold
+    chart.fontFamily = "Nunito Sans";
+    chart.fontSize = 12;
+    chart.fontWeight = "bold";
+    
     setTimeout(() => {
         setShowData(true);
     }, 2500);

@@ -154,6 +154,7 @@ const PieMenciones = (props) => {
     pieSeries.slices.template.strokeOpacity = 0.4;
     pieSeries.slices.template.strokeWidth = 0;
     pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0.04; // Establece el espacio (gap) entre los segmentos del pastel
+    pieSeries.slices.template.states.getKey("hover").properties.scale = 1.1; // Establece el tamaño del segmento al pasar el mouse
 
 
     const validarColores = (filterCandidates) => {
@@ -189,6 +190,11 @@ const PieMenciones = (props) => {
     chart.legend = new am4charts.Legend();
     chart.legend.position = "bottom";
     const [showData, setShowData] = useState(false)
+
+    // change chart font family to Nunito Sans
+    chart.fontFamily = "Nunito Sans";
+    chart.fontSize = 12;
+    chart.fontWeight = "bold";
 
     //set true showData if some of the candidates is active
     useEffect(() => {

@@ -190,7 +190,7 @@ select.select.candy.meta.form-select {
   font-family: 'Nunito Sans Bold', sans-serif;
 }
 
-.justify-content-center.active-text.col span{
+.justify-content-center.active-text.col span {
   font-family: 'Nunito Sans Bold', sans-serif;
   font-weight: 700;
 }
@@ -554,6 +554,19 @@ tspan {
     font-size: 10px;
   }
 
+  div#root {
+    padding: 0.5rem;
+    margin: 0.1rem;
+  }
+
+  .main.container {
+    padding: 20px;
+  }
+
+  .tophead.row {
+    margin-top: 10px;
+  }
+
 }
 
 button.mt-5.btn.btn-primary:hover {
@@ -633,7 +646,7 @@ select.select.candy.seguidores.form-select {
   border: 1px solid #5e5ca533;
 }
 
-select.select.candy.meta.form-select{
+select.select.candy.meta.form-select {
   border: 1px solid #c56e9b33;
   font-size: 14px;
 }

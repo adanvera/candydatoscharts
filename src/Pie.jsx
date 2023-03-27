@@ -187,6 +187,11 @@ const Pie = (props) => {
     chart.legend.position = "bottom";
     const [showData, setShowData] = useState(false)
 
+    // change chart font family to Nunito Sans
+    chart.fontFamily = "Nunito Sans";
+    chart.fontSize = 12;
+    chart.fontWeight = "bold";
+
     //set true showData if some of the candidates is active
     useEffect(() => {
         if (filterCandidates.length > 0) {
