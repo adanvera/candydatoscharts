@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import imgsanti from './assets/images/candydatos/santipena.png'
-import imgefrain from './assets/images/candydatos/efrain-1.png'
-import imgchila from './assets/images/candydatos/chila.png'
-import imgeuclides from './assets/images/candydatos/euclides-1.png'
-import imgpayo from './assets/images/candydatos/payocubas.png'
 
-
-const Pie = (props) => {
+const LineChart = (props) => {
 
     const active = props?.state
 
@@ -27,35 +21,35 @@ const Pie = (props) => {
         "candydato": "Santi Peña",
         "inversion": 354798249,
         "color": "#DD7969",
-        "href": { imgsanti }
+        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/santi_ico.png"
     }
 
     const efrain = {
         "candydato": "Efraín Alegre",
         "inversion": 67056894,
         "color": "#966AA7",
-        "href": { imgefrain }
+        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/chila_ico.png"
     }
 
     const chila = {
         "candydato": "José Luis Chilavert",
         "inversion": 0,
         "color": "#FF6F91",
-        "href": { imgchila }
+        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/chiiilllaaa.png"
     }
 
     const euclides = {
         "candydato": "Euclides Acevedo",
         "inversion": 12190733,
         "color": "#FF9671",
-        "href": { imgeuclides }
+        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/euclides-ico.png"
     }
 
     const payo = {
         "candydato": "Payo Cubas",
         "inversion": 90096,
         "color": "#FFC75F",
-        "href": { imgpayo }
+        "bullet": "https://candydatos.idealscloud.uk/wp-content/uploads/2023/03/payo_ico.png"
     }
 
     const calcularTotalOtros = (total, filterCandidates) => {
@@ -90,14 +84,18 @@ const Pie = (props) => {
 
     const otros = {
         "candydato": "Otros",
-        "inversion": 1487995426,
+        "inversion": calcularTotalOtros(1487995426, filterCandidates),
         "color": "#80D4A3"
     }
 
+
+
+    // Themes begin
     am4core.useTheme(am4themes_animated);
+    // Themes end
 
     // Create chart instance
-    var chart = am4core.create("chartdiv", am4charts.PieChart);
+    var chart = am4core.create("chartdivtwoss", am4charts.XYChart);
 
     //add data dinacmic with filterCandidates array
     const addDatatoChart = (santi, efrain, chila, euclides, payo, otros, filterCandidates) => {
@@ -136,53 +134,43 @@ const Pie = (props) => {
     // Add data
     chart.data = addDatatoChart(santi, efrain, chila, euclides, payo, otros, filterCandidates)
 
-    // Add and configure Series
-    var pieSeries = chart.series.push(new am4charts.PieSeries());
-    pieSeries.dataFields.value = "inversion";
-    pieSeries.dataFields.category = "candydato";
-    pieSeries.innerRadius = am4core.percent(50);
-    pieSeries.ticks.template.disabled = true;
-    pieSeries.labels.template.disabled = true;
-    let rgm = new am4core.RadialGradientModifier();
-    rgm.brightnesses.push(-0.8, 0.5, -0.1, 1.5, 0.3, -0.1);
-    pieSeries.slices.template.fillModifier = rgm;
-    pieSeries.slices.template.strokeModifier = rgm;
-    pieSeries.slices.template.strokeOpacity = 0.4;
-    pieSeries.slices.template.strokeWidth = 0;
-    pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0.04; // Establece el espacio (gap) entre los segmentos del pastel
+    // Create axes
+    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = "candydato";
+    categoryAxis.renderer.grid.template.disabled = true;
+    categoryAxis.renderer.minGridDistance = 10;
+    categoryAxis.renderer.inside = true;
+    categoryAxis.renderer.labels.template.fill = am4core.color("#000");
+    categoryAxis.renderer.labels.template.fontSize = 10;
 
-    const validarColores = (filterCandidates) => {
-        const colores = []
-        Object.keys(filterCandidates).map((key) => {
-            switch (filterCandidates[key]) {
-                case 'santi':
-                    colores.push(am4core.color("#fd7358", 0.8))
-                    break;
-                case 'efrain':
-                    colores.push(am4core.color("#966AA7", 0.8))
-                    break;
-                case 'chila':
-                    colores.push(am4core.color("#FF6F91", 0.8))
-                    break;
-                case 'euclides':
-                    colores.push(am4core.color("#F9D3B8", 0.8))
-                    break;
-                case 'payo':
-                    colores.push(am4core.color("#FFC75F", 0.8))
-                    break;
-            }
-        })
+    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    valueAxis.renderer.grid.template.strokeDasharray = "4,4";
+    valueAxis.renderer.labels.template.disabled = false;
+    valueAxis.min = 0;
 
-        //setea el siguiente color siempre para que el siguiente sea el color de otros
-        colores.push(am4core.color("#EAECFF", 1))
+    // Do not crop bullets
+    chart.maskBullets = false;
 
-        return colores
+    // Remove padding
+    chart.paddingBottom = 0;
 
-    }
+    // Create series
+    var series = chart.series.push(new am4charts.ColumnSeries());
+    series.dataFields.valueY = "inversion";
+    series.dataFields.categoryX = "candydato";
+    series.columns.template.propertyFields.fill = "color";
+    series.columns.template.propertyFields.stroke = "color";
+    series.columns.template.column.cornerRadiusTopLeft = 5;
+    series.columns.template.column.cornerRadiusTopRight = 5;
+    series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/b]";
+    series.columns.template.fillOpacity = 0.3;
+    chart.responsive.enabled = true;
 
-    pieSeries.colors.list = validarColores(filterCandidates)
-    chart.legend = new am4charts.Legend();
-    chart.legend.position = "bottom";
+    // add x scrollbar
+    var scrollbarX = new am4charts.XYChartScrollbar();
+    scrollbarX.series.push(series);
+    chart.scrollbarX = scrollbarX;
+
     const [showData, setShowData] = useState(false)
 
     //set true showData if some of the candidates is active
@@ -195,10 +183,10 @@ const Pie = (props) => {
     return (
         <>
             {
-                showData && <div id="chartdiv"></div>
+                showData && <div className='mt-3 mb-3' id="chartdivtwoss"></div>
             }
         </>
     )
 }
 
-export default Pie
+export default LineChart

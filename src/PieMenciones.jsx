@@ -6,7 +6,7 @@ import imgeuclides from './assets/images/candydatos/euclides-1.png'
 import imgpayo from './assets/images/candydatos/payocubas.png'
 
 
-const Pie = (props) => {
+const PieMenciones = (props) => {
 
     const active = props?.state
 
@@ -25,35 +25,35 @@ const Pie = (props) => {
 
     const santi = {
         "candydato": "Santi Peña",
-        "inversion": 354798249,
+        "inversion": 103271,
         "color": "#DD7969",
         "href": { imgsanti }
     }
 
     const efrain = {
         "candydato": "Efraín Alegre",
-        "inversion": 67056894,
+        "inversion": 30787,
         "color": "#966AA7",
         "href": { imgefrain }
     }
 
     const chila = {
         "candydato": "José Luis Chilavert",
-        "inversion": 0,
+        "inversion": 20416,
         "color": "#FF6F91",
         "href": { imgchila }
     }
 
     const euclides = {
         "candydato": "Euclides Acevedo",
-        "inversion": 12190733,
+        "inversion": 14205,
         "color": "#FF9671",
         "href": { imgeuclides }
     }
 
     const payo = {
         "candydato": "Payo Cubas",
-        "inversion": 90096,
+        "inversion": 4715,
         "color": "#FFC75F",
         "href": { imgpayo }
     }
@@ -84,13 +84,15 @@ const Pie = (props) => {
             }
         })
 
-        return total - resta
+        const finalTotal = total - resta
+
+        return finalTotal
 
     }
 
     const otros = {
         "candydato": "Otros",
-        "inversion": 1487995426,
+        "inversion": 396207,
         "color": "#80D4A3"
     }
 
@@ -151,6 +153,7 @@ const Pie = (props) => {
     pieSeries.slices.template.strokeWidth = 0;
     pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0.04; // Establece el espacio (gap) entre los segmentos del pastel
 
+
     const validarColores = (filterCandidates) => {
         const colores = []
         Object.keys(filterCandidates).map((key) => {
@@ -201,4 +204,4 @@ const Pie = (props) => {
     )
 }
 
-export default Pie
+export default PieMenciones

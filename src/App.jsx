@@ -1,7 +1,7 @@
 import './App.css'
 import { Button, Col, Container, Form, Modal, Row } from 'react-bootstrap'
 import Metainfo from './Metainfo'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imgsanti from './assets/images/candydatos/santipena.png'
 import imgefrain from './assets/images/candydatos/efrain-1.png'
@@ -12,8 +12,10 @@ import * as htmlToImage from 'html-to-image';
 import { saveAs } from 'file-saver';
 import logo from './assets/images/logo.png'
 import Menciones from './Menciones';
+import Plataformas from './Plataformas';
 
-function App() {
+
+const App = (props) => {
 
   const [select, setSelect] = useState('plataforma')
   const nodeRef = useRef(null);
@@ -46,7 +48,7 @@ function App() {
   const showImagesToSelect = () => {
     return (
       <>
-        <Col className='justify-content-center' >
+        <Col className={state.santi === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center santi'}>
           <div
             className={state.santi === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='santi'
@@ -56,7 +58,7 @@ function App() {
           </div>
           <span>Santi Peña</span>
         </Col>
-        <Col className='justify-content-center' >
+        <Col className={state.efrain === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center efra '}>
           <div
             className={state.efrain === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='efrain'
@@ -66,7 +68,7 @@ function App() {
           </div>
           <span>Efraín Alegre</span>
         </Col>
-        <Col className='justify-content-center' >
+        <Col className={state.chila === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center chila'}>
           <div
             className={state.chila === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='chila'
@@ -74,9 +76,12 @@ function App() {
           >
             <img src={imgchila} />
           </div>
-          <span>Jose Chilavert</span>
+          <div className='chila'>
+            <span>Jose Luis</span>
+            <span>Chilavert</span>
+          </div>
         </Col>
-        <Col className='justify-content-center' >
+        <Col className={state.euclides === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center eucli '}>
           <div
             className={state.euclides === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='euclides'
@@ -84,9 +89,12 @@ function App() {
           >
             <img src={imgeuclides} />
           </div>
-          <span>Euclides Acevedo</span>
+          <div className='chila'>
+            <span>Euclides</span>
+            <span>Acevedo</span>
+          </div>
         </Col>
-        <Col className='justify-content-center' >
+        <Col className={state.payo === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center payo '}>
           <div
             className={state.payo === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='payo'
@@ -103,11 +111,12 @@ function App() {
 
   // function to create image from html and download
   const handleScreenshot = async () => {
-    const image = await htmlToImage.toPng(nodeRef.current);
-    // you can use this image in any way you want
-    console.log(image)
+    const image = await htmlToImage.toJpeg(nodeRef.current)
     let file = convertBase64ToFile(image, "image.png");
     saveAs(file, "image.png");
+    setTimeout(() => {
+      setHideElements(false)
+    }, 15000);
   };
 
   // function to convert base64 to file
@@ -130,8 +139,40 @@ function App() {
 
   const handleModal = (e) => {
     e.preventDefault();
+    setHideElements(true)
     setModalShow(true);
   }
+
+  useEffect(() => {
+    if (modalShow) {
+      setHideElements(true)
+    } else {
+      setHideElements(false)
+    }
+  }, [modalShow, hideElements])
+
+  console.log(modalShow);
+
+  // const transporter = nodemailer.createTransport({
+  //   host: 'smtp.ethereal.email',
+  //   port: 465,
+  //   secure: false,
+  //   auth: {
+  //     user: 'candydatos@wumla.com',
+  //     pass: 'p=kw-sR2XUKx',
+  //   },
+  // });
+
+  // const emailHtml = render(<Email url="https://example.com" />);
+
+
+  //   Username:	candydatos@wumla.com
+  //   Password: p = kw - sR2XUKx
+  // Incoming Server: mail.wumla.com
+  // 		IMAP Port: 993 POP3 Port: 995
+  // Outgoing Server: mail.wumla.com
+  // 		SMTP Port: 465
+  //   IMAP, POP3, and SMTP require authentication.
 
   function renderForm(data) {
     return (
@@ -192,7 +233,7 @@ function App() {
           </div>
           <h4>EXPORTA LA COMPARACIÓN</h4>
           <p>
-            Descarga ahora como <span className='clickeed' >JPG</span> o <span onClick={handleScreenshot} className='clickeed'>PNG</span>
+            Descarga ahora como <span onClick={handleScreenshot} className='clickeed'>JPG</span>
           </p>
           <div className='separador'></div>
           <p>Registrate para descargar los datos</p>
@@ -203,39 +244,75 @@ function App() {
     );
   }
 
+  const renderButton = (hide, modal) => {
+    // <Button className='mt-5' variant="primary" onClick={(e) => handleModal(e)}>Exportar datos</Button> : ''
+    if (hide === true && modal === true) {
+      return (
+        <div>
+          <img src={logo} alt='logo' />
+        </div>
+      )
+    } else return <Button className='mt-5 pulse' variant="primary" onClick={(e) => handleModal(e)}>Exportar datos</Button>
+  }
+
   return (
     <div className="App">
       <Container className='main' ref={nodeRef} >
         <Row className=''>
           <Col md={12} className='header'>
-            <p className='titlehead'>Me gustaría ver datos sobre</p>
-            <select className='select candy' value={select} onChange={(e) => onChangeSelect(e)} >
-              <option value="plataforma">VOLUMEN DE MENCIONES</option>
-              <option value="meta">INVERSION EN META</option>
-            </select>
+            <Row>
+              <p className='titlehead'>Me gustaría ver datos sobre</p>
+            </Row>
+            <Row className='justify-content-center'>
+              <Col md={5}>
+                <Form.Select
+                  // className='select candy'
+                  className={select === 'seguidores'
+                    ? 'select candy seguidores' :
+                    select === 'meta' ? 'select candy meta' : 'select candy  plataforma'}
+                  value={select}
+                  onChange={(e) => onChangeSelect(e)}
+                >
+                  <option className='seguidores' value="seguidores">SEGUIDORES POR PLATAFORMA</option>
+                  <option className='plataforma' value="plataforma">VOLUMEN DE MENCIONES</option>
+                  <option className='meta' value="meta">INVERSION EN META</option>
+                </Form.Select>
+              </Col>
+            </Row>
           </Col>
         </Row>
         <Row className='mt-3 mb-3'>
           <Col md={12} id="itemca">
-            <p className='titlecandidate'>Los candidatos</p>
+            {
+              modalShow === false &&
+              <p className='titlecandidate'>Los candidatos</p>
+            }
+
             <Row className='selectcontainer'>
               {showImagesToSelect()}
             </Row>
           </Col>
         </Row>
         {
-          select === 'plataforma' ?
-            <Menciones state={state} />
-            :
-            <Metainfo state={state} />
+          select === 'plataforma' &&
+          <Menciones state={state} />
+        }
+        {
+          select === 'seguidores' &&
+          <Plataformas state={state} />
+        }
+        {
+          select === 'meta' &&
+          <Metainfo state={state} />
         }
         <ModalExport
           show={modalShow}
           onHide={() => setModalShow(false)}
+          // no close when click outside
+          backdrop="static"
         />
         {
-          hideElements === false ?
-            <Button className='mt-5' variant="primary" onClick={(e) => handleModal(e)}>Exportar datos</Button> : ''
+          renderButton(hideElements, modalShow)
         }
       </Container>
     </div>

@@ -16,12 +16,13 @@ import a font from folder src/assets/fonts
   border-radius: 21px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Nunito Sans', sans-serif;
 
 }
 
 p.titlehead {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 27px;
   letter-spacing: 0em;
@@ -37,7 +38,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Nunito Sans', sans-serif;
   background: #ECEDFB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,8 +51,14 @@ body {
   margin: auto;
 }
 
-#chartdivsdre{
+#chartdivtwo {
   width: 60%;
+  height: 300px;
+  margin: auto;
+}
+
+#chartdivtwoss {
+  width: 80%;
   height: 300px;
   margin: auto;
 }
@@ -60,8 +67,6 @@ body {
 #chartdiv {
   z-index: 1;
 }
-
-
 
 #otherChart {
   width: 100%;
@@ -78,7 +83,6 @@ div#infoselect {
 }
 
 select.select.candy {
-  background: none;
   color: #C56E9B;
   border: none;
   height: 40px;
@@ -86,6 +90,38 @@ select.select.candy {
   font-family: 'BheltVol02-Regular';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  text-align: center;
+}
+
+option.plataforma {
+  color: #E58253;
+}
+
+option.seguidores {
+  color: #5E5CA5;
+}
+
+option.meta {
+  color: #C56E9B;
+}
+
+select.select.candy.plataforma.form-select {
+  color: #E58253;
+}
+
+select.select.candy.seguidores.form-select {
+  color: #5E5CA5;
+}
+
+
+select.select.candy.meta.form-select {
+  color: #C56E9B;
+}
+
+
+.meta {
+  color: #C56E9B;
 }
 
 .focus-only:focus {
@@ -117,7 +153,6 @@ select.select.candy {
   text-align: start;
 }
 
-
 /**/
 
 .candydata {
@@ -126,6 +161,39 @@ select.select.candy {
   width: 80px;
   background-position: center;
   border-radius: 100%;
+  opacity: 0.6;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 1rem;
+  border: 1xp solid red;
+}
+
+.justify-content-center.col span {
+  opacity: 0.6;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.chila {
+  display: grid;
+  font-size: 14px;
+}
+
+.chila span {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 .selectcontainer.row {
@@ -156,7 +224,10 @@ div#itemca {
 }
 
 .is-active {
-  border: 2px solid #fbbc04;
+  opacity: 1;
+  background: linear-gradient(180deg, #625EA8 0%, #C27688 40.1%, #FFD277 77.08%, #FFDD55 100%);
+  border: 1px solid #F3F3F3;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
 }
 
 .nodata img {
@@ -252,4 +323,223 @@ p.titlecandidate {
   text-align: -webkit-center;
   margin-top: 3rem;
   margin-bottom: 0.1rem;
+}
+
+.chila li {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.justify-content-center.active-text.col span {
+  font-family: 'Nunito Sans', sans-serif;
+  opacity: 1;
+  color: #5E5CA5;
+}
+
+select.select.candy.form-select:focus-visible:focus-visible {
+  outline: none;
+}
+
+div#listfilter p {
+  margin: 0;
+  padding: 0;
+  padding-right: 15px;
+}
+
+div#listfilter {
+  text-align: center;
+  align-items: center;
+}
+
+.is-active-li {
+  opacity: 1;
+  color: white;
+}
+
+.bkandwhite {
+  filter: grayscale(100%);
+}
+
+.colorfull {
+  filter: grayscale(0%);
+}
+
+.redeslist.row .col {
+  cursor: pointer;
+}
+
+.redeslist.row .col:hover {
+  filter: grayscale(0%);
+}
+
+p.seleccionarred {
+  border: none;
+  height: 40px;
+  font-weight: 900;
+  font-family: 'Nunito Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  color: #5E5CA5;
+  text-align: center;
+}
+
+.justify-content-center.col .candydata:hover {
+  cursor: pointer;
+  opacity: 1;
+  /* border: 2px solid rgba(94, 92, 165, 0.6); */
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  transition: all 0.4s ease;
+  transform: scale(1.1);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  background: linear-gradient(180deg, #625EA8 0%, #C27688 40.1%, #FFD277 77.08%, #FFDD55 100%);
+}
+
+.justify-content-center.col .candydata {
+  border: 1px solid #d3d3d3;
+}
+
+.names {
+  font-size: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+}
+
+.names.santi {
+  background-color: #fd7358;
+}
+
+.names.efra {
+  background-color: #966AA7;
+}
+
+.names.chila {
+  background-color: #FF6F91;
+}
+
+.names.eucli {
+  background-color: #FF9671;
+}
+
+.names.payo {
+  background-color: #FFC75F;
+}
+
+tspan {
+  font-size: 10px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  select.select.candy.meta.form-select {
+    font-size: 11px;
+  }
+
+  p.titlehead {
+    font-size: 14px;
+  }
+
+  p.titlecandidate {
+    font-size: 14px;
+  }
+
+  .candydata {
+    height: 60px;
+    width: 60px;
+  }
+
+  .candydata img {
+    height: 60px;
+  }
+
+  label.form-check-label {
+    font-size: 10px;
+  }
+
+  div#chartdivtwoss {
+    transform: scale(0.8);
+  }
+
+  select.select.candy.plataforma.form-select {
+    font-size: 11px;
+  }
+
+  select.select.candy.seguidores.form-select {
+    font-size: 11px;
+  }
+
+  button.mt-5.btn.btn-primary {
+    font-size: 11px;
+  }
+
+  .main.container {
+    padding: 20px;
+  }
+
+  .justify-content-center.chila.col span {
+    font-size: 10px;
+  }
+
+  .justify-content-center.santi.col span {
+    font-size: 10px;
+  }
+
+  .justify-content-center.eucli.col span {
+    font-size: 10px;
+  }
+
+  .justify-content-center.payo.col span {
+    font-size: 10px;
+  }
+
+  .justify-content-center.efra.col span {
+    font-size: 10px;
+  }
+
+  option.plataforma {
+    color: #E58253;
+    font-size: 10px;
+  }
+  
+  option.seguidores {
+    color: #5E5CA5;font-size: 10px;
+  }
+  
+  option.meta {
+    color: #C56E9B;font-size: 10px;
+  }
+  
+  select.select.candy.plataforma.form-select {
+    color: #E58253;font-size: 10px;
+  }
+  
+  select.select.candy.seguidores.form-select {
+    color: #5E5CA5;font-size: 10px;
+  }
+  
+  
+  select.select.candy.meta.form-select {
+    color: #C56E9B;font-size: 10px;
+  }
+  
+  .justify-content-center.active-text.col span {
+    font-size: 10px;
+}
+
+}
+
+button.mt-5.btn.btn-primary:hover {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  transition: all 0.4s ease;
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+  transform: scale(1.1);
 }
