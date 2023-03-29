@@ -85,8 +85,6 @@ const LineChart = (props) => {
         "color": "#80D4A3"
     }
 
-
-
     // Themes begin
     am4core.useTheme(am4themes_animated);
     // Themes end
@@ -139,11 +137,22 @@ const LineChart = (props) => {
     categoryAxis.renderer.inside = true;
     categoryAxis.renderer.labels.template.fill = am4core.color("#000");
     categoryAxis.renderer.labels.template.fontSize = 10;
+    categoryAxis.renderer.labels.template.fontWeight = "bold";
+    categoryAxis.renderer.labels.template.color = "#5458a2";
+    categoryAxis.renderer.labels.template.fill = am4core.color("#5E5CA5");
+    // change font family to the axus
+    categoryAxis.renderer.labels.template.fontFamily = "Nunito sans";
+    categoryAxis.renderer.labels.template.fontWeight = "bold";
+    categoryAxis.renderer.labels.template.fontSize = 10;
 
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.grid.template.strokeDasharray = "4,4";
     valueAxis.renderer.labels.template.disabled = false;
     valueAxis.min = 0;
+    valueAxis.renderer.labels.template.fill = am4core.color("#5E5CA5");
+    valueAxis.renderer.labels.template.fontFamily = "Nunito sans";
+    valueAxis.renderer.labels.template.fontWeight = "bold";
+    valueAxis.renderer.labels.template.fontSize = 10;
 
     // Do not crop bullets
     chart.maskBullets = false;

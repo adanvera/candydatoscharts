@@ -7,12 +7,12 @@ import a font from folder src/assets/fonts
 }
 
 .main {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   height: auto;
   min-width: 100%;
   border-radius: 21px;
   padding: 30px;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05); */
   border-radius: 21px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,7 +47,7 @@ html * {
 
 body {
   font-family: 'Nunito Sans';
-  /* background: #ECEDFB; */
+  background: #ECEDFB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Nunito Sans' !important;
@@ -67,9 +67,7 @@ body {
 }
 
 #chartdivtwoss {
-  width: 80%;
   height: 300px;
-  margin: auto;
 }
 
 
@@ -157,7 +155,7 @@ select.select.candy.meta.form-select {
   line-height: 22px;
   /* identical to box height */
   text-transform: uppercase;
-  color: #121212;
+  color: #5458a2;
 }
 
 .col-md-6 {
@@ -191,6 +189,13 @@ select.select.candy.meta.form-select {
   letter-spacing: 0em;
   text-align: center;
   font-family: 'Nunito Sans' !important;
+  font-weight: 900;
+  color: #5458a2;
+}
+
+div#listfilter p.pr-5 {
+  font-weight: 900;
+  color: #5458a2;
 }
 
 .justify-content-center.active-text.col span {
@@ -215,9 +220,24 @@ select.select.candy.meta.form-select {
 
 .selectcontainer.row {
   justify-content: space-between;
-  background-color: white;
+  /* background-color: white; */
   min-height: 75px;
   align-items: center;
+}
+
+.col-md-5 select.select.candy.seguidores.form-select {
+  background: transparent;
+  -webkit-appearance: auto;
+}
+
+select.select.candy.plataforma.form-select {
+  background: transparent;
+  -webkit-appearance: auto;
+}
+
+select.select.candy.meta.form-select {
+  background: transparent;
+  -webkit-appearance: auto;
 }
 
 .justify-content-center.d-flex.col-md-1 span {
@@ -240,9 +260,32 @@ div#itemca {
   font-weight: 900;
 }
 
+.form-check.form-switch label.form-check-label {
+  font-weight: 900;
+  color: #5E5CA5;
+}
+
+tspan {
+  color: #5E5CA5 !important;
+}
+
+g text tspan {
+  color: #5E5CA5 !important;
+  font-weight: 800;
+  font-family: 'Nunito Sans' !important;
+}
+
+.justify-content-center.col .candydata.is-active {
+  border: 3px solid #fbbc04;
+  outline: 1px dotted black;
+  outline-offset: 5px;
+  outline-width: 2px;
+}
+
 .is-active {
+  border: 2px solid #fbbc04;
   opacity: 1;
-  background: linear-gradient(180deg, #625EA8 0%, #C27688 40.1%, #FFD277 77.08%, #FFDD55 100%);
+  /* background: linear-gradient(180deg, #625EA8 0%, #C27688 40.1%, #FFD277 77.08%, #FFDD55 100%); */
   border: 1px solid #F3F3F3;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
 }
@@ -351,7 +394,8 @@ p.titlecandidate {
 .justify-content-center.active-text.col span {
   font-family: 'Nunito Sans' !important;
   opacity: 1;
-  color: #5E5CA5;
+  color: #5458a2;
+  font-weight: 900;
 }
 
 select.select.candy.form-select:focus-visible:focus-visible {
@@ -408,6 +452,7 @@ p.seleccionarred {
 }
 
 .justify-content-center.col .candydata:hover {
+  border: 2px solid #fbbc04;
   cursor: pointer;
   opacity: 1;
   /* border: 2px solid rgba(94, 92, 165, 0.6); */
@@ -415,9 +460,9 @@ p.seleccionarred {
   animation-name: slidein;
   animation-iteration-count: infinite;
   transition: all 0.4s ease;
-  transform: scale(1.1);
+  transform: scale(1.3);
   /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  background: linear-gradient(180deg, #625EA8 0%, #C27688 40.1%, #FFD277 77.08%, #FFDD55 100%);
+  /* background: linear-gradient(180deg, #625EA8 0%, #C27688 40.1%, #FFD277 77.08%, #FFDD55 100%); */
 }
 
 .justify-content-center.col .candydata {
@@ -592,6 +637,12 @@ tspan {
   .nodata.row img {
     width: 50%;
     height: 50%;
+  }
+
+  .main.container {
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
 }
@@ -776,4 +827,79 @@ option.meta {
   font-style: normal;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+/* .justify-content-center.santi.cont.col {
+  position: relative;
+}
+
+.etiqueta {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+}
+
+.justify-content-center.payo.cont.col {
+  position: relative;
+}
+
+.justify-content-center.eucli.cont.col{
+  position: relative;
+}
+
+.justify-content-center.chila.cont.col {
+  position: relative;
+}
+
+.justify-content-center.efra.cont.col{
+  position: relative;
+}
+
+.justify-content-center.payo.cont.col {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flow-root;
+}
+
+.justify-content-center.eucli.cont.col{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flow-root;
+}
+
+.justify-content-center.chila.cont.col {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flow-root;
+}
+
+.justify-content-center.efra.cont.col{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flow-root;
+}
+
+.justify-content-center.santi.cont.col{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flow-root;
+} */
+
+.justify-content-center.active-text.cont.col div#chila {
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.justify-content-center.chila.cont.col div#chila {
+    margin: auto;
+    margin-bottom: 15px;
 }

@@ -378,10 +378,8 @@ const LineChartMenciones = (props) => {
     dateAxis.renderer.grid.template.location = 0.5;
     dateAxis.startLocation = 0.5;
     dateAxis.endLocation = 0.5;
-    //hide grid lines opacity
-    dateAxis.renderer.grid.template.strokeOpacity = 0.03;
-    // opacity of axis
-    dateAxis.renderer.labels.template.fillOpacity = 0.1;
+    dateAxis.renderer.labels.template.fill = am4core.color("#5458a2");
+    dateAxis.renderer.grid.template.stroke = am4core.color("#5458a2");
 
     var fillModifier = new am4core.LinearGradientModifier();
     fillModifier.opacities = [1, 0];
@@ -390,6 +388,8 @@ const LineChartMenciones = (props) => {
 
     // Create value axis
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    // change color of axis
+    valueAxis.renderer.labels.template.fill = am4core.color("#5458a2");
 
     const validateHiden = (filterCandidates, data) => {
         // if filterCandidates includes santi then return false
@@ -413,7 +413,7 @@ const LineChartMenciones = (props) => {
     // Legend color list
     one.stroke = am4core.color("#DF7767");
     one.fill = am4core.color("#DF7767");
-    // add color gradient to one series
+
 
     // add series two
     var two = chart.series.push(new am4charts.LineSeries());
@@ -523,6 +523,19 @@ const LineChartMenciones = (props) => {
     chart.fontSize = 12;
     chart.fontWeight = "bold";
 
+    // change color of title of names displayed in legend
+    chart.legend.labels.template.fill = am4core.color("#5458a2");
+    chart.legend.labels.template.fontFamily = "Nunito Sans";
+    chart.legend.labels.template.fontSize = 12;
+    chart.legend.labels.template.fontWeight = 900;
+    
+    // change color of title of names displayed in legend
+    chart.legend.valueLabels.template.fill = am4core.color("#5458a2");
+    chart.legend.valueLabels.template.fontFamily = "Nunito Sans";
+    chart.legend.valueLabels.template.fontSize = 12;
+    chart.legend.valueLabels.template.fontWeight = 900;
+    
+    
     return (
         <>
             {

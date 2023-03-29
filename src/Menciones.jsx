@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Col, Form, Row } from 'react-bootstrap'
 import nodata from './assets/images/nodata.png'
 import LineChartMenciones from './LineChartMenciones'
-import PieMenciones from './PieMenciones'
+import PieTwo from './PieTwo'
 
 const Menciones = (props) => {
 
@@ -37,7 +37,7 @@ const Menciones = (props) => {
     if (data === false) {
       return <LineChartMenciones state={active} download={download} />
     } else {
-      return <PieMenciones state={active} download={download} />
+      return <PieTwo state={active} download={download} />
     }
   }
 

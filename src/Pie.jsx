@@ -192,6 +192,16 @@ const Pie = (props) => {
     chart.fontSize = 12;
     chart.fontWeight = "bold";
 
+    // change color of title of names displayed in legend
+    chart.legend.labels.template.fill = am4core.color("#5458a2");
+    chart.legend.labels.template.fontSize = 12;
+    chart.legend.labels.template.fontWeight = "bold";
+    chart.legend.labels.template.fontFamily = "Nunito Sans";
+    // change color of values of names displayed in legend
+    chart.legend.valueLabels.template.fill = am4core.color("#5458a2");  
+    chart.legend.valueLabels.template.fontSize = 12;
+    chart.legend.valueLabels.template.fontWeight = "bold";
+    
     //set true showData if some of the candidates is active
     useEffect(() => {
         if (filterCandidates.length > 0) {

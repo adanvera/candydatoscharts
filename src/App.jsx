@@ -49,11 +49,11 @@ const App = (props) => {
 
   const [download, setDownload] = useState(false)
 
-  // function show responsive images to select candidate 
+  // function show responsive images to select candidate  
   const showImagesToSelect = () => {
     return (
       <>
-        <Col className={state.santi === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center santi'}>
+        <Col className={state.santi === 'is-active' ? 'justify-content-center active-text cont' : 'justify-content-center santi cont'}>
           <div
             className={state.santi === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='santi'
@@ -61,9 +61,10 @@ const App = (props) => {
           >
             <img src={imgsanti} />
           </div>
-          <span>Santi Peña</span>
+          <span className='etiqueta'>Santi</span>
+          <span className='etiqueta'>Peña</span>
         </Col>
-        <Col className={state.efrain === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center efra '}>
+        <Col className={state.efrain === 'is-active' ? 'justify-content-center active-text cont' : 'justify-content-center efra  cont'}>
           <div
             className={state.efrain === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='efrain'
@@ -71,9 +72,10 @@ const App = (props) => {
           >
             <img src={imgefrain} />
           </div>
-          <span>Efraín Alegre</span>
+          <span className='etiqueta'>Efraín</span>
+          <span className='etiqueta'>Alegre</span>
         </Col>
-        <Col className={state.chila === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center chila'}>
+        <Col className={state.chila === 'is-active' ? 'justify-content-center active-text cont' : 'justify-content-center chila cont'}>
           <div
             className={state.chila === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='chila'
@@ -82,11 +84,11 @@ const App = (props) => {
             <img src={imgchila} />
           </div>
           <div className='chila'>
-            <span>Jose Luis</span>
-            <span>Chilavert</span>
+            <span className='etiqueta'>Jose Luis </span>
+            <span className='etiqueta'>Chilavert</span>
           </div>
         </Col>
-        <Col className={state.euclides === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center eucli '}>
+        <Col className={state.euclides === 'is-active' ? 'justify-content-center active-text cont' : 'justify-content-center eucli cont '}>
           <div
             className={state.euclides === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='euclides'
@@ -95,11 +97,11 @@ const App = (props) => {
             <img src={imgeuclides} />
           </div>
           <div className='chila'>
-            <span>Euclides</span>
-            <span>Acevedo</span>
+            <span className='etiqueta'>Euclides</span>
+            <span className='etiqueta'>Acevedo</span>
           </div>
         </Col>
-        <Col className={state.payo === 'is-active' ? 'justify-content-center active-text' : 'justify-content-center payo '}>
+        <Col className={state.payo === 'is-active' ? 'justify-content-center active-text cont ' : 'justify-content-center payo cont '}>
           <div
             className={state.payo === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='payo'
@@ -107,7 +109,8 @@ const App = (props) => {
           >
             <img src={imgpayo} />
           </div>
-          <span>Payo Cubas</span>
+          <span className='etiqueta'>Payo</span>
+          <span className='etiqueta'>Cubas</span>
         </Col>
       </>
     )
@@ -241,7 +244,7 @@ const App = (props) => {
       <Container className='main' ref={nodeRef} >
         <Row className=''>
           <Col md={12} className='header'>
-            <Row className='tophead'>  
+            <Row className='tophead'>
               <p className='titlehead'>ver datos sobre</p>
             </Row>
             <Row className='justify-content-center'>
@@ -264,11 +267,7 @@ const App = (props) => {
         </Row>
         <Row className='mt-3 mb-3'>
           <Col md={12} id="itemca">
-            {
-              modalShow === false &&
-              <p className='titlecandidate'>Seleccionar candidatos</p>
-            }
-
+            <p className='titlecandidate mb-4'>Seleccionar candidatos</p>
             <Row className='selectcontainer'>
               {showImagesToSelect()}
             </Row>

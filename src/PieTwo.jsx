@@ -7,7 +7,7 @@ import imgpayo from './assets/images/candydatos/payocubas.png'
 import { CSVLink } from 'react-csv'
 
 
-const PieMenciones = (props) => {
+const PieTwo = (props) => {
 
     const active = props?.state
     const download = props?.download
@@ -86,9 +86,7 @@ const PieMenciones = (props) => {
             }
         })
 
-        const finalTotal = total - resta
-
-        return finalTotal
+        return total - resta
 
     }
 
@@ -154,8 +152,6 @@ const PieMenciones = (props) => {
     pieSeries.slices.template.strokeOpacity = 0.4;
     pieSeries.slices.template.strokeWidth = 0;
     pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0.04; // Establece el espacio (gap) entre los segmentos del pastel
-    pieSeries.slices.template.states.getKey("hover").properties.scale = 1.1; // Establece el tamaño del segmento al pasar el mouse
-
 
     const validarColores = (filterCandidates) => {
         const colores = []
@@ -196,6 +192,16 @@ const PieMenciones = (props) => {
     chart.fontSize = 12;
     chart.fontWeight = "bold";
 
+    // change color of title of names displayed in legend
+    chart.legend.labels.template.fill = am4core.color("#5458a2");
+    chart.legend.labels.template.fontSize = 12;
+    chart.legend.labels.template.fontWeight = "bold";
+    chart.legend.labels.template.fontFamily = "Nunito Sans";
+    // change color of values of names displayed in legend
+    chart.legend.valueLabels.template.fill = am4core.color("#5458a2");
+    chart.legend.valueLabels.template.fontSize = 12;
+    chart.legend.valueLabels.template.fontWeight = "bold";
+
     //set true showData if some of the candidates is active
     useEffect(() => {
         if (filterCandidates.length > 0) {
@@ -210,10 +216,9 @@ const PieMenciones = (props) => {
                 <>
                     <div id="chartdiv"></div>
                 </>
-
             }
         </>
     )
 }
 
-export default PieMenciones
+export default PieTwo

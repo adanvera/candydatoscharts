@@ -229,9 +229,15 @@ const RedesData = (props) => {
     // Create axes
     var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
     dateAxis.renderer.minGridDistance = 50;
+    dateAxis.renderer.labels.template.fill = am4core.color("#5E5CA5");
 
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     // add color gradient to chart
+    // add color to numbers referenced to the left of the chart
+    valueAxis.renderer.labels.template.fill = am4core.color("#5E5CA5");
+    // change font family to the axus
+    valueAxis.renderer.labels.template.fontFamily = "Nunito sans";
+    valueAxis.renderer.labels.template.fontWeight = "bold";
 
     // Create santi series fb
     var santifb = chart.series.push(new am4charts.LineSeries());
@@ -249,7 +255,6 @@ const RedesData = (props) => {
     santifb.tooltipText = "Santi Peña"
     // add fill gradient to series
     santifb.fillOpacity = 0.04
-
 
     // Add cursor
     chart.cursor = new am4charts.XYCursor();
@@ -688,7 +693,8 @@ const RedesData = (props) => {
     // change chart font family to Nunito san bold
     chart.fontFamily = "Nunito Sans";
     chart.fontSize = 12;
-    chart.fontWeight = "bold";
+    chart.fontWeight = 900;
+    chart.fill = am4core.color("#5E5CA5");
     
     setTimeout(() => {
         setShowData(true);

@@ -77,8 +77,11 @@ const Plataformas = (props) => {
             <>
                 <Row>
                     <Col className='d-flex mt-5 mb-5 justify-content-center' id='listfilter'>
-                        <p className='pr-5'>Seleccionar una red social:</p>
+
                         <Row className='redeslist'>
+                            <Col>
+                                <p className='pr-5'>Seleccionar red social:</p>
+                            </Col>
                             <Col className={state.insta === 'is-active' ? 'colorfull' : 'bkandwhite'} id='insta' onClick={(e) => handleSetActive('insta')}>
                                 <img src={insta} />
                             </Col>
