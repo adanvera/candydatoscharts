@@ -47,7 +47,7 @@ html * {
 
 body {
   font-family: 'Nunito Sans';
-  background: #ECEDFB;
+  /* background: #ECEDFB; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Nunito Sans' !important;
@@ -902,4 +902,8 @@ option.meta {
 .justify-content-center.chila.cont.col div#chila {
     margin: auto;
     margin-bottom: 15px;
+}
+
+.main.bkpsc.container{
+  background-color: #ECEDFB;
 }

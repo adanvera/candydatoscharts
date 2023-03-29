@@ -241,7 +241,7 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <Container className='main' ref={nodeRef} >
+      <Container className={hideElements === true ? 'main bkpsc':'main'} ref={nodeRef} >
         <Row className=''>
           <Col md={12} className='header'>
             <Row className='tophead'>
