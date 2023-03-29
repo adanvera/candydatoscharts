@@ -1,7 +1,7 @@
 # candydatoscharts
 
 
-El esarrollo del proyecto esta a cargo de [Adan Vera](https://www.linkedin.com/in/adanvera/) 
+El desarrollo del proyecto esta a cargo de [Adan Vera](https://www.linkedin.com/in/adanvera/) 
 
 <table>
   <tr>
