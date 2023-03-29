@@ -907,3 +907,10 @@ option.meta {
 .main.bkpsc.container{
   background-color: #ECEDFB;
 }
+
+.col-md-5 select.select.candy.plataforma.form-select {
+  text-align: center;
+  align-items: center;
+  align-self: end;
+  padding: inherit;
+}
