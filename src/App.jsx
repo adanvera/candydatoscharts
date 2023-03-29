@@ -119,8 +119,8 @@ const App = (props) => {
   // function to create image from html and download
   const handleScreenshot = async () => {
     const image = await htmlToImage.toJpeg(nodeRef.current)
-    let file = convertBase64ToFile(image, "image.png");
-    saveAs(file, "image.png");
+    let file = convertBase64ToFile(image, "image.jpg");
+    saveAs(file, "image.jpg");
     setTimeout(() => {
       setHideElements(false)
     }, 15000);
