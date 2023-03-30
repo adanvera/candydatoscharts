@@ -13,7 +13,7 @@ import { saveAs } from 'file-saver';
 import logo from './assets/images/logo.png'
 import Menciones from './Menciones';
 import Plataformas from './Plataformas';
-import { Box, DialogActions, FormControl, Grid, IconButton, InputLabel, MenuItem, Modal, Select, TextField, Typography } from '@mui/material';
+import { Box, DialogActions, FormControl, FormControlLabel, FormLabel, Grid, IconButton, InputLabel, MenuItem, Modal, Radio, RadioGroup, Select, TextField, Typography } from '@mui/material';
 import { Dialog } from '@mui/material';
 import axios from 'axios';
 import check from './assets/images/icos/success.png'
@@ -326,10 +326,10 @@ const App = (props) => {
             <div className='separador'></div>
             {
               !dataSended &&
-              <>
+              <div className='textt'>
                 <p>Registrate para descargar los datos</p>
                 <p>en formato CSV/Excel</p>
-              </>
+              </div>
             }
             <form>
               {
@@ -371,12 +371,21 @@ const App = (props) => {
                       required
                     />
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={12} md={6} >
                     <label>¿Para qué lo vas a usar?</label>
-                    <Select className='input' name='uso'  value={user.uso} onChange={handleChange} required>
-                      <MenuItem value='prensa'>Publicar en prensa.</MenuItem>
-                      <MenuItem value='analisispersonal'>Analizar por mi cuenta los datos.</MenuItem>
-                    </Select>
+                    <FormControl>
+                      {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}
+                      <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue={user.uso}
+                        id='uso'
+                        name='uso'
+                        value={user.uso}
+                        onChange={handleChange} required>
+                        <FormControlLabel value="prensa" control={<Radio />} label="Publicar en prensa" />
+                        <FormControlLabel value="analisispersonal" control={<Radio />} label="Analizar por mi cuenta los datos" />
+                      </RadioGroup>
+                    </FormControl>
                   </Grid>
                 </Grid>
               }

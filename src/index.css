@@ -689,6 +689,17 @@ tspan {
     padding-right: 5px;
   }
 
+  .MuiFormControl-root.MuiTextField-root.input.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    width: 40% !important;
+  }
+
+  div#uso {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
 }
 
 button.mt-5.btn.btn-primary:hover {
@@ -794,6 +805,17 @@ select.select.candy.meta.form-select {
     height: 50%;
   }
 
+  .MuiFormControl-root.MuiTextField-root.input.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    width: 40% !important;
+  }
+
+  div#uso {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
 }
 
 .justify-content-center.col .candydata {
@@ -818,6 +840,17 @@ font-size: 16px;
 line-height: 22px;
 text-transform: uppercase;
 color: #121212; */
+
+label.MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root {
+  padding: 0;
+  margin: 0;
+}
+
+span.MuiButtonBase-root.MuiRadio-root.MuiRadio-colorPrimary.PrivateSwitchBase-root.MuiRadio-root.MuiRadio-colorPrimary.MuiRadio-root.MuiRadio-colorPrimary.css-vqmohf-MuiButtonBase-root-MuiRadio-root {
+  margin: 0;
+  padding: 2px;
+}
+
 
 select.select.candy.plataforma.form-select {
   font-style: normal;
@@ -1050,16 +1083,16 @@ select.select.candy.plataforma.form-select {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8{
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8 {
   background-color: #ECEDFB;
 }
 
-.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8{
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8 {
   font-family: 'Nunito Sans' !important;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color:#5E5CA5;
+  color: #5E5CA5;
 }
 
 .MuiBox-root.css-1l9ohcm h4 {
@@ -1074,4 +1107,69 @@ input#outlined-basic {
   font-family: 'Nunito Sans' !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.MuiBox-root.css-1l9ohcm {
+  border: none;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.MuiBox-root.css-1l9ohcm {
+  color: #5E5CA5;
+}
+
+.textt p {
+  margin: 0;
+}
+
+.textt {
+  margin-bottom: 2rem;
+}
+
+span.css-hyxlzm {
+  color: #5E5CA5;
+}
+
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-6.selectradiobutton.css-1fyyp8j-MuiGrid-root {
+  text-align: start;
+}
+
+.MuiFormControl-root.MuiTextField-root.input.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 80%;
+}
+
+.selectradiobutton.col {
+  text-align: start;
+  margin: 0;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  color: #5E5CA5;
+}
+
+input#outlined-basic:focus-visible{
+  border: 1px solid #5E5CA5;
+  color: #5E5CA5;
+}
+
+input#outlined-basic:focus-within{
+  border: 1px solid #5E5CA5;
+  color: #5E5CA5;
+}
+
+input#outlined-basic:visited{
+  border: 1px solid #5E5CA5;
+  color: #5E5CA5;
+}
+
+input#outlined-basic:focus{
+  border: 1px solid #5E5CA5;
+  color: #5E5CA5;
+}
+
+
+input#outlined-basic:active{
+  border: 1px solid #5E5CA5;
+  color: #5E5CA5;
 }
