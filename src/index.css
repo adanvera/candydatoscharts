@@ -1212,6 +1212,11 @@ input#outlined-basic:focus {
   color: #5E5CA5;
 }
 
+div#uso {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 
 input#outlined-basic:active {
   border: 1px solid #5E5CA5;
@@ -1224,7 +1229,6 @@ input#outlined-basic:active {
 }
 
 input#outlined-basic {
-  border: 1px solid #5E5CA5;
   color: #5E5CA5;
 }
 

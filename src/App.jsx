@@ -334,60 +334,64 @@ const App = (props) => {
             <form>
               {
                 !dataSended &&
-                <Grid container spacing={2}>
-                  <Grid item xs={12} md={6}>
-                    <TextField
-                      className='input'
-                      id="outlined-basic"
-                      label="Nombre"
-                      variant="outlined"
-                      name='name'
-                      value={user.name}
-                      onChange={handleChange}
-                      required
-                    />
+                <>
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} md={6}>
+                      <TextField
+                        className='input'
+                        id="outlined-basic"
+                        label="Nombre"
+                        variant="outlined"
+                        name='name'
+                        value={user.name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <TextField
+                        className='input'
+                        id="outlined-basic"
+                        label="Email"
+                        variant="outlined"
+                        name='email'
+                        value={user.email}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <TextField
+                        className='input'
+                        id="outlined-basic"
+                        label="Teléfono"
+                        variant="outlined"
+                        name='phone'
+                        value={user.phone}
+                        onChange={handleChange}
+                        required
+                      />
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} md={6}>
-                    <TextField
-                      className='input'
-                      id="outlined-basic"
-                      label="Email"
-                      variant="outlined"
-                      name='email'
-                      value={user.email}
-                      onChange={handleChange}
-                      required
-                    />
+                  <Grid item xs={6} md={6} className="radiooo mt-3">
+                    <Grid item xs={12} md={6} className="optionsradio">
+                      <label className='mb-2'>¿Para qué lo vas a usar?</label>
+                      <FormControl className='raddopt'>
+                        {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}
+                        <RadioGroup
+                          aria-labelledby="demo-radio-buttons-group-label"
+                          defaultValue={user.uso}
+                          id='uso'
+                          name='uso'
+                          value={user.uso}
+                          onChange={handleChange} required>
+                          <FormControlLabel value="prensa" control={<Radio />} label="Publicar en prensa" />
+                          <FormControlLabel value="analisispersonal" control={<Radio />} label="Analizar por mi cuenta los datos" />
+                        </RadioGroup>
+                      </FormControl>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} md={6}>
-                    <TextField
-                      className='input'
-                      id="outlined-basic"
-                      label="Teléfono"
-                      variant="outlined"
-                      name='phone'
-                      value={user.phone}
-                      onChange={handleChange}
-                      required
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6} >
-                    <label>¿Para qué lo vas a usar?</label>
-                    <FormControl>
-                      {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}
-                      <RadioGroup
-                        aria-labelledby="demo-radio-buttons-group-label"
-                        defaultValue={user.uso}
-                        id='uso'
-                        name='uso'
-                        value={user.uso}
-                        onChange={handleChange} required>
-                        <FormControlLabel value="prensa" control={<Radio />} label="Publicar en prensa" />
-                        <FormControlLabel value="analisispersonal" control={<Radio />} label="Analizar por mi cuenta los datos" />
-                      </RadioGroup>
-                    </FormControl>
-                  </Grid>
-                </Grid>
+                </>
               }
               {
                 dataSended &&
