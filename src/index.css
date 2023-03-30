@@ -719,6 +719,10 @@ tspan {
 
 }
 
+span.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
+  font-size: 12px;
+}
+
 button.mt-5.btn.btn-primary:hover {
   animation-duration: 3s;
   animation-name: slidein;
