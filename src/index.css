@@ -67,7 +67,7 @@ body {
 }
 
 #chartdivtwoss {
-  height: 300px;
+  height: 450px;
 }
 
 
@@ -702,7 +702,7 @@ tspan {
     margin-top: 0.3rem !important;
     margin-bottom: 0.3rem !important;
   }
-  
+
   .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-6.css-1fyyp8j-MuiGrid-root {
     text-align: center;
     justify-content: center;
