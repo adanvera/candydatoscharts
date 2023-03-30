@@ -1061,3 +1061,17 @@ select.select.candy.plataforma.form-select {
   -moz-osx-font-smoothing: grayscale;
   color:#5E5CA5;
 }
+
+.MuiBox-root.css-1l9ohcm h4 {
+  font-weight: 900;
+  font-family: 'Nunito Sans' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input#outlined-basic {
+  font-weight: 900;
+  font-family: 'Nunito Sans' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

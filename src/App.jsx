@@ -171,7 +171,7 @@ const App = (props) => {
   // submit event
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (user.name === '' || user.mail === '' || user.phone === '' || user.uso === '') {
+    if (user.name === '' || user.email === '' || user.phone === '' || user.uso === '') {
       alert('Completa todos los campos')
       return
     }
@@ -373,7 +373,7 @@ const App = (props) => {
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <label>¿Para qué lo vas a usar?</label>
-                    <Select className='input' name='uso' value={user.uso} onChange={handleChange} required>
+                    <Select className='input' name='uso'  value={user.uso} onChange={handleChange} required>
                       <MenuItem value='prensa'>Publicar en prensa.</MenuItem>
                       <MenuItem value='analisispersonal'>Analizar por mi cuenta los datos.</MenuItem>
                     </Select>
