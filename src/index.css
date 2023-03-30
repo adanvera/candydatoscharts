@@ -838,7 +838,7 @@ select.select.candy.plataforma.form-select option.plataforma {
 }
 
 .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.select.candy.plataforma.css-fvipm8 {
-  color: #5E5CA5;
+  color: #e58253;
   font-style: normal;
   font-weight: 900;
   text-transform: uppercase;
@@ -876,9 +876,6 @@ select.select.candy.plataforma.form-select option.plataforma {
   text-transform: uppercase;
   font-size: 14px;
 }
-
-
-
 
 .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8 {
   color: #e58253;
