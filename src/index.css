@@ -694,13 +694,6 @@ tspan {
     width: 40% !important;
   }
 
-  div#uso {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-
   .MuiDialogActions-root.MuiDialogActions-spacing.emete.css-hlj6pa-MuiDialogActions-root {
     margin-top: 0.1rem
   }
@@ -831,10 +824,9 @@ select.select.candy.meta.form-select {
   }
 
   div#uso {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .separador {
