@@ -837,8 +837,24 @@ select.select.candy.plataforma.form-select option.plataforma {
   text-transform: uppercase;
 }
 
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.select.candy.plataforma.css-fvipm8 {
+  color: #5E5CA5;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8 {
   color: #5E5CA5;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.select.candy.meta.css-fvipm8 {
+  color: #c56e9b;
   font-style: normal;
   font-weight: 900;
   text-transform: uppercase;
@@ -853,8 +869,18 @@ select.select.candy.plataforma.form-select option.plataforma {
   font-size: 14px;
 }
 
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.select.candy.meta.css-fvipm8 {
+  color: #c56e9b;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 14px;
+}
 
-.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.select.candy.plataforma.css-fvipm8 {
+
+
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8 {
   color: #e58253;
   font-style: normal;
   font-weight: 900;
@@ -1039,4 +1065,28 @@ select.select.candy.plataforma.form-select {
 
 .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8{
   background-color: #ECEDFB;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.select.candy.plataforma.css-fvipm8{
+  color:#e58253 !important;
+  font-family: 'Nunito Sans' !important;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input.css-qiwgdb{
+  color:#5458a2 !important;
+  font-family: 'Nunito Sans' !important;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.select.candy.meta.css-fvipm8{
+  color:#c56e9b !important;
+  font-family: 'Nunito Sans' !important;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
