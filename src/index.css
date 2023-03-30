@@ -877,16 +877,6 @@ select.select.candy.plataforma.form-select option.plataforma {
   font-size: 14px;
 }
 
-.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8 {
-  color: #e58253;
-  font-style: normal;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-
-
 select.select.candy.plataforma.form-select option.meta {
   font-style: normal;
   font-weight: 900;
@@ -1070,5 +1060,4 @@ select.select.candy.plataforma.form-select {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color:#5E5CA5;
-
 }
