@@ -563,7 +563,11 @@ tspan {
     height: 60px;
     width: 60px;
   }
-  
+
+  .candydata img {
+    height: 60px;
+  }
+
   label.form-check-label {
     font-size: 10px;
   }
