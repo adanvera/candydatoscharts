@@ -1063,3 +1063,12 @@ select.select.candy.plataforma.form-select {
 .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.Mui-focused.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8{
   background-color: #ECEDFB;
 }
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.select.candy.seguidores.css-fvipm8{
+  font-family: 'Nunito Sans' !important;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#5E5CA5;
+
+}
