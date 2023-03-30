@@ -1173,3 +1173,23 @@ input#outlined-basic:active{
   border: 1px solid #5E5CA5;
   color: #5E5CA5;
 }
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover{
+  border: 1px solid #5E5CA5;
+  color: #5E5CA5;
+}
+
+input#outlined-basic {
+  border: 1px solid #5E5CA5;
+  color: #5E5CA5;
+}
+
+.MuiInput-root:focus-within .MuiInput-underline:before {
+  border: 1px solid #5E5CA5;
+  color: #5E5CA5;
+}
+
+.MuiAutocomplete-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: 1px solid #5E5CA5;
+  color: #5E5CA5;/* Cambiar color de borde aquí */
+}
