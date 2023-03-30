@@ -701,6 +701,15 @@ tspan {
     padding: 10px;
   }
 
+  .MuiDialogActions-root.MuiDialogActions-spacing.emete.css-hlj6pa-MuiDialogActions-root {
+    margin-top: 0.1rem
+  }
+
+  .textt {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
 }
 
 button.mt-5.btn.btn-primary:hover {
@@ -816,6 +825,23 @@ select.select.candy.meta.form-select {
     align-items: center;
     padding: 10px;
   }
+
+  .separador {
+    border-top: 1px solid #E8E8E8;
+    text-align: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .MuiDialogActions-root.MuiDialogActions-spacing.emete.css-hlj6pa-MuiDialogActions-root {
+    margin-top: 0.2rem
+  }
+
+  .textt {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
 
 }
 
@@ -1149,33 +1175,33 @@ span.css-hyxlzm {
   color: #5E5CA5;
 }
 
-input#outlined-basic:focus-visible{
+input#outlined-basic:focus-visible {
   border: 1px solid #5E5CA5;
   color: #5E5CA5;
 }
 
-input#outlined-basic:focus-within{
+input#outlined-basic:focus-within {
   border: 1px solid #5E5CA5;
   color: #5E5CA5;
 }
 
-input#outlined-basic:visited{
+input#outlined-basic:visited {
   border: 1px solid #5E5CA5;
   color: #5E5CA5;
 }
 
-input#outlined-basic:focus{
+input#outlined-basic:focus {
   border: 1px solid #5E5CA5;
   color: #5E5CA5;
 }
 
 
-input#outlined-basic:active{
+input#outlined-basic:active {
   border: 1px solid #5E5CA5;
   color: #5E5CA5;
 }
 
-.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover{
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover {
   border: 1px solid #5E5CA5;
   color: #5E5CA5;
 }
@@ -1192,5 +1218,6 @@ input#outlined-basic {
 
 .MuiAutocomplete-root.Mui-focused .MuiOutlinedInput-notchedOutline {
   border: 1px solid #5E5CA5;
-  color: #5E5CA5;/* Cambiar color de borde aquí */
+  color: #5E5CA5;
+  /* Cambiar color de borde aquí */
 }

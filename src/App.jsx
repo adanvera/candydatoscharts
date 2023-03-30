@@ -63,7 +63,7 @@ const App = (props) => {
   const showImagesToSelect = () => {
     return (
       <>
-        <Col className={state.santi === 'is-active' ? 'justify-content-center active-text cont' : 'justify-content-center santi cont'}>
+        <Col className={state.santi === 'is-active' ? 'justify-content-center active-text cont mt-1' : 'justify-content-center santi cont mt-1'}>
           <div
             className={state.santi === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='santi'
@@ -74,7 +74,7 @@ const App = (props) => {
           <span className='etiqueta'>Santi</span>
           <span className='etiqueta'>Peña</span>
         </Col>
-        <Col className={state.efrain === 'is-active' ? 'justify-content-center active-text cont' : 'justify-content-center efra  cont'}>
+        <Col className={state.efrain === 'is-active' ? 'justify-content-center active-text cont mt-1' : 'justify-content-center efra  cont mt-1'}>
           <div
             className={state.efrain === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='efrain'
@@ -85,7 +85,7 @@ const App = (props) => {
           <span className='etiqueta'>Efraín</span>
           <span className='etiqueta'>Alegre</span>
         </Col>
-        <Col className={state.chila === 'is-active' ? 'justify-content-center active-text cont' : 'justify-content-center chila cont'}>
+        <Col className={state.chila === 'is-active' ? 'justify-content-center active-text cont mt-1' : 'justify-content-center chila cont mt-1'}>
           <div
             className={state.chila === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='chila'
@@ -98,7 +98,7 @@ const App = (props) => {
             <span className='etiqueta'>Chilavert</span>
           </div>
         </Col>
-        <Col className={state.euclides === 'is-active' ? 'justify-content-center active-text cont' : 'justify-content-center eucli cont '}>
+        <Col className={state.euclides === 'is-active' ? 'justify-content-center active-text cont mt-1' : 'justify-content-center eucli cont mt-1'}>
           <div
             className={state.euclides === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='euclides'
@@ -111,7 +111,7 @@ const App = (props) => {
             <span className='etiqueta'>Acevedo</span>
           </div>
         </Col>
-        <Col className={state.payo === 'is-active' ? 'justify-content-center active-text cont ' : 'justify-content-center payo cont '}>
+        <Col className={state.payo === 'is-active' ? 'justify-content-center active-text cont mt-1 ' : 'justify-content-center payo cont mt-1'}>
           <div
             className={state.payo === 'is-active' ? 'candydata is-active' : 'candydata'}
             id='payo'
