@@ -373,8 +373,8 @@ const App = (props) => {
                       />
                     </Grid>
                   </Grid>
-                  <Grid item xs={6} md={6} className="radiooo mt-3">
-                    <Grid item xs={12} md={6} className="optionsradio">
+                  <Grid className="radiooo mt-3">
+                    <Grid className="optionsradio">
                       <label className='mb-2'>¿Para qué lo vas a usar?</label>
                       <FormControl className='raddopt'>
                         {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}

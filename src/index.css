@@ -710,6 +710,11 @@ tspan {
     align-items: center;
   }
 
+  label.MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root {
+    text-align: center;
+    justify-content: center;
+  }
+
 }
 
 span.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
@@ -823,12 +828,6 @@ select.select.candy.meta.form-select {
     width: 40% !important;
   }
 
-  div#uso {
-    padding: 10px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .separador {
     border-top: 1px solid #E8E8E8;
     text-align: center;
@@ -851,6 +850,10 @@ select.select.candy.meta.form-select {
     align-items: center;
   }
 
+  label.MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root {
+    text-align: center;
+    justify-content: center;
+  }
 
 }
 
@@ -1202,12 +1205,6 @@ input#outlined-basic:visited {
 input#outlined-basic:focus {
   border: 1px solid #5E5CA5;
   color: #5E5CA5;
-}
-
-div#uso {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
 }
 
 input#outlined-basic:active {
