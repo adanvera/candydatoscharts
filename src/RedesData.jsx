@@ -249,8 +249,8 @@ const RedesData = (props) => {
     //hide serie
     santifb.hidden = validateHiden(filterCandidates, 'santi', redActive, 'fb');
     // add color to the line displayed in the line chart
-    santifb.stroke = am4core.color("#DD7969");
-    santifb.fill = am4core.color("#DD7969");
+    santifb.stroke = am4core.color("#DA7A67");
+    santifb.fill = am4core.color("#DA7A67");
     // add label to the line displayed in the line chart
     santifb.tooltipText = "Santi Peña"
     // add fill gradient to series
@@ -275,8 +275,8 @@ const RedesData = (props) => {
     santitw.tooltip.pointerOrientation = "vertical";
     santitw.hidden = validateHiden(filterCandidates, 'santi', redActive, 'tw');
     // add color to the line displayed in the line chart
-    santitw.stroke = am4core.color("#DD7969");
-    santitw.fill = am4core.color("#DD7969");
+    santitw.stroke = am4core.color("#DA7A67");
+    santitw.fill = am4core.color("#DA7A67");
     // add label to the line displayed in the line chart
     santitw.tooltipText = "Santi Peña"
     // add fill gradient to series
@@ -297,8 +297,8 @@ const RedesData = (props) => {
     santinsta.tooltip.pointerOrientation = "vertical";
     santinsta.hidden = validateHiden(filterCandidates, 'santi', redActive, 'insta');
     // add color to the line displayed in the line chart
-    santinsta.stroke = am4core.color("#DD7969");
-    santinsta.fill = am4core.color("#DD7969");
+    santinsta.stroke = am4core.color("#DA7A67");
+    santinsta.fill = am4core.color("#DA7A67");
     // add label to the line displayed in the line chart
     santinsta.tooltipText = "Santi Peña"
     // add fill gradient to series
@@ -320,8 +320,8 @@ const RedesData = (props) => {
     // hide a serie
     santitk.hidden = validateHiden(filterCandidates, 'santi', redActive, 'tk');
     // add color to the line displayed in the line chart
-    santitk.stroke = am4core.color("#DD7969");
-    santitk.fill = am4core.color("#DD7969");
+    santitk.stroke = am4core.color("#DA7A67");
+    santitk.fill = am4core.color("#DA7A67");
     // add label to the line displayed in the line chart
     santitk.tooltipText = "Santi Peña"
     // add fill gradient to series
@@ -342,8 +342,8 @@ const RedesData = (props) => {
     efrafb.tooltip.pointerOrientation = "vertical";
     efrafb.hidden = validateHiden(filterCandidates, 'efrain', redActive, 'fb');
     // add color to the line displayed in the line chart
-    efrafb.stroke = am4core.color("#966AA7");
-    efrafb.fill = am4core.color("#966AA7");
+    efrafb.stroke = am4core.color("#9669A9");
+    efrafb.fill = am4core.color("#9669A9");
     // add label to the line displayed in the line chart
     efrafb.tooltipText = "Efrain Alegre"
     // add fill gradient to series
@@ -364,8 +364,8 @@ const RedesData = (props) => {
     efratw.tooltip.pointerOrientation = "vertical";
     efratw.hidden = validateHiden(filterCandidates, 'efrain', redActive, 'tw');
     // add color to the line displayed in the line chart
-    efratw.stroke = am4core.color("#966AA7");
-    efratw.fill = am4core.color("#966AA7");
+    efratw.stroke = am4core.color("#9669A9");
+    efratw.fill = am4core.color("#9669A9");
     // add label to the line displayed in the line chart
     efratw.tooltipText = "Efrain Alegre"
     // add fill gradient to series
@@ -386,8 +386,8 @@ const RedesData = (props) => {
     efrainsta.tooltip.pointerOrientation = "vertical";
     efrainsta.hidden = validateHiden(filterCandidates, 'efrain', redActive, 'insta');
     // add color to the line displayed in the line chart
-    efrainsta.stroke = am4core.color("#966AA7");
-    efrainsta.fill = am4core.color("#966AA7");
+    efrainsta.stroke = am4core.color("#9669A9");
+    efrainsta.fill = am4core.color("#9669A9");
     // add label to the line displayed in the line chart
     efrainsta.tooltipText = "Efrain Alegre"
     // add fill gradient to series
@@ -408,8 +408,8 @@ const RedesData = (props) => {
     efratk.tooltip.pointerOrientation = "vertical";
     efratk.hidden = validateHiden(filterCandidates, 'efrain', redActive, 'tk');
     // add color to the line displayed in the line chart
-    efratk.stroke = am4core.color("#966AA7");
-    efratk.fill = am4core.color("#966AA7");
+    efratk.stroke = am4core.color("#9669A9");
+    efratk.fill = am4core.color("#9669A9");
     // add label to the line displayed in the line chart
     efratk.tooltipText = "Efrain Alegre"
     // add fill gradient to series
@@ -430,8 +430,8 @@ const RedesData = (props) => {
     chilafb.tooltip.pointerOrientation = "vertical";
     chilafb.hidden = validateHiden(filterCandidates, 'chila', redActive, 'fb');
     // add color to the line displayed in the line chart
-    chilafb.stroke = am4core.color("#FF6F91");
-    chilafb.fill = am4core.color("#FF6F91");
+    chilafb.stroke = am4core.color("#B67294");
+    chilafb.fill = am4core.color("#B67294");
     // add label to the line displayed in the line chart
     chilafb.tooltipText = "Jose Luis Chilavert"
     // add fill gradient to series
@@ -452,8 +452,8 @@ const RedesData = (props) => {
     chilatw.tooltip.pointerOrientation = "vertical";
     chilatw.hidden = validateHiden(filterCandidates, 'chila', redActive, 'tw');
     // add color to the line displayed in the line chart
-    chilatw.stroke = am4core.color("#FF6F91");
-    chilatw.fill = am4core.color("#FF6F91");
+    chilatw.stroke = am4core.color("#B67294");
+    chilatw.fill = am4core.color("#B67294");
     // add label to the line displayed in the line chart
     chilatw.tooltipText = "Jose Luis Chilavert"
     // add fill gradient to series
@@ -474,8 +474,8 @@ const RedesData = (props) => {
     chilainsta.tooltip.pointerOrientation = "vertical";
     chilainsta.hidden = validateHiden(filterCandidates, 'chila', redActive, 'insta');
     // add color to the line displayed in the line chart
-    chilainsta.stroke = am4core.color("#FF6F91");
-    chilainsta.fill = am4core.color("#FF6F91");
+    chilainsta.stroke = am4core.color("#B67294");
+    chilainsta.fill = am4core.color("#B67294");
     // add label to the line displayed in the line chart
     chilainsta.tooltipText = "Jose Luis Chilavert"
     // add fill gradient to series
@@ -496,8 +496,8 @@ const RedesData = (props) => {
     chilatk.tooltip.pointerOrientation = "vertical";
     chilatk.hidden = validateHiden(filterCandidates, 'chila', redActive, 'tk');
     // add color to the line displayed in the line chart
-    chilatk.stroke = am4core.color("#FF6F91");
-    chilatk.fill = am4core.color("#FF6F91");
+    chilatk.stroke = am4core.color("#B67294");
+    chilatk.fill = am4core.color("#B67294");
     // add label to the line displayed in the line chart
     chilatk.tooltipText = "Jose Luis Chilavert"
     // add fill gradient to series
@@ -518,8 +518,8 @@ const RedesData = (props) => {
     euclifb.tooltip.pointerOrientation = "vertical";
     euclifb.hidden = validateHiden(filterCandidates, 'euclides', redActive, 'fb');
     // add color to the line displayed in the line chart
-    euclifb.stroke = am4core.color("#FF9671");
-    euclifb.fill = am4core.color("#FF9671");
+    euclifb.stroke = am4core.color("#F6A72F");
+    euclifb.fill = am4core.color("#F6A72F");
     // add label to the line displayed in the line chart
     euclifb.tooltipText = "Euclides Acevedo"
     // add fill gradient to series
@@ -540,8 +540,8 @@ const RedesData = (props) => {
     euclitw.tooltip.pointerOrientation = "vertical";
     euclitw.hidden = validateHiden(filterCandidates, 'euclides', redActive, 'tw');
     // add color to the line displayed in the line chart
-    euclitw.stroke = am4core.color("#FF9671");
-    euclitw.fill = am4core.color("#FF9671");
+    euclitw.stroke = am4core.color("#F6A72F");
+    euclitw.fill = am4core.color("#F6A72F");
     // add label to the line displayed in the line chart
     euclitw.tooltipText = "Euclides Acevedo"
     // add fill gradient to series
@@ -562,8 +562,8 @@ const RedesData = (props) => {
     eucliinsta.tooltip.pointerOrientation = "vertical";
     eucliinsta.hidden = validateHiden(filterCandidates, 'euclides', redActive, 'insta');
     // add color to the line displayed in the line chart
-    eucliinsta.stroke = am4core.color("#FF9671");
-    eucliinsta.fill = am4core.color("#FF9671");
+    eucliinsta.stroke = am4core.color("#F6A72F");
+    eucliinsta.fill = am4core.color("#F6A72F");
     // add label to the line displayed in the line chart
     eucliinsta.tooltipText = "Euclides Acevedo"
     // add fill gradient to series
@@ -584,8 +584,8 @@ const RedesData = (props) => {
     euclitk.tooltip.pointerOrientation = "vertical";
     euclitk.hidden = validateHiden(filterCandidates, 'euclides', redActive, 'tk');
     // add color to the line displayed in the line chart
-    euclitk.stroke = am4core.color("#FF9671");
-    euclitk.fill = am4core.color("#FF9671");
+    euclitk.stroke = am4core.color("#F6A72F");
+    euclitk.fill = am4core.color("#F6A72F");
     // add label to the line displayed in the line chart
     euclitk.tooltipText = "Euclides Acevedo"
     // add fill gradient to series
@@ -606,8 +606,8 @@ const RedesData = (props) => {
     payofb.tooltip.pointerOrientation = "vertical";
     payofb.hidden = validateHiden(filterCandidates, 'payo', redActive, 'fb');
     // add color to the line displayed in the line chart
-    payofb.stroke = am4core.color("#FFC75F");
-    payofb.fill = am4core.color("#FFC75F");
+    payofb.stroke = am4core.color("#F18B3A");
+    payofb.fill = am4core.color("#F18B3A");
     // add label to the line displayed in the line chart
     payofb.tooltipText = "Payo Cubas"
     // add fill gradient to series
@@ -628,8 +628,8 @@ const RedesData = (props) => {
     payotw.tooltip.pointerOrientation = "vertical";
     payotw.hidden = validateHiden(filterCandidates, 'payo', redActive, 'tw');
     // add color to the line displayed in the line chart
-    payotw.stroke = am4core.color("#FFC75F");
-    payotw.fill = am4core.color("#FFC75F");
+    payotw.stroke = am4core.color("#F18B3A");
+    payotw.fill = am4core.color("#F18B3A");
     // add label to the line displayed in the line chart
     payotw.tooltipText = "Payo Cubas"
     // add fill gradient to series
@@ -650,8 +650,8 @@ const RedesData = (props) => {
     payoinsta.tooltip.pointerOrientation = "vertical";
     payoinsta.hidden = validateHiden(filterCandidates, 'payo', redActive, 'insta');
     // add color to the line displayed in the line chart
-    payoinsta.stroke = am4core.color("#FFC75F");
-    payoinsta.fill = am4core.color("#FFC75F");
+    payoinsta.stroke = am4core.color("#F18B3A");
+    payoinsta.fill = am4core.color("#F18B3A");
     // add label to the line displayed in the line chart
     payoinsta.tooltipText = "Payo Cubas"
     // add fill gradient to series
@@ -672,8 +672,8 @@ const RedesData = (props) => {
     payotk.tooltip.pointerOrientation = "vertical";
     payotk.hidden = validateHiden(filterCandidates, 'payo', redActive, 'tk');
     // add color to the line displayed in the line chart
-    payotk.stroke = am4core.color("#FFC75F");
-    payotk.fill = am4core.color("#FFC75F");
+    payotk.stroke = am4core.color("#F18B3A");
+    payotk.fill = am4core.color("#F18B3A");
     // add label to the line displayed in the line chart
     payotk.tooltipText = "Payo Cubas"
     // add fill gradient to series
@@ -694,7 +694,7 @@ const RedesData = (props) => {
     chart.fontFamily = "Nunito Sans";
     chart.fontSize = 12;
     chart.fontWeight = 900;
-    chart.fill = am4core.color("#5E5CA5");
+   
     
     setTimeout(() => {
         setShowData(true);

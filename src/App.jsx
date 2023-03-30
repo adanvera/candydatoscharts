@@ -13,10 +13,20 @@ import { saveAs } from 'file-saver';
 import logo from './assets/images/logo.png'
 import Menciones from './Menciones';
 import Plataformas from './Plataformas';
-import { Box, DialogActions, Grid, IconButton, MenuItem, Modal, Select, TextField, Typography } from '@mui/material';
+import { Box, DialogActions, FormControl, Grid, IconButton, InputLabel, MenuItem, Modal, Select, TextField, Typography } from '@mui/material';
 import { Dialog } from '@mui/material';
 import axios from 'axios';
 import check from './assets/images/icos/success.png'
+
+
+// const useStyles = makeStyles((theme) => ({
+//   formControl: {
+//     margin: theme.spacing(1),
+//     minWidth: 120,
+//     display: 'flex',
+//     justifyContent: 'center',
+//   },
+// }));
 
 const App = (props) => {
 
@@ -241,26 +251,39 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <Container className={hideElements === true ? 'main bkpsc':'main'} ref={nodeRef} >
+      <Container className={hideElements === true ? 'main bkpsc' : 'main'} ref={nodeRef} >
         <Row className=''>
           <Col md={12} className='header'>
             <Row className='tophead'>
               <p className='titlehead'>ver datos sobre</p>
             </Row>
-            <Row className='justify-content-center'>
-              <Col md={5}>
-                <Form.Select
-                  // className='select candy'
-                  className={select === 'seguidores'
-                    ? 'select candy seguidores' :
-                    select === 'meta' ? 'select candy meta' : 'select candy  plataforma'}
-                  value={select}
-                  onChange={(e) => onChangeSelect(e)}
-                >
-                  <option className='seguidores' value="seguidores">SEGUIDORES POR PLATAFORMA</option>
-                  <option className='plataforma' value="plataforma">VOLUMEN DE MENCIONES</option>
-                  <option className='meta' value="meta">INVERSION EN META</option>
-                </Form.Select>
+            <Row>
+              <Col md={4}>
+              </Col>
+              <Col md={4} className={select === 'seguidores'
+                ? 'select candy seguidores' :
+                select === 'meta' ? 'select candy meta' : 'select candy  plataforma'}>
+                <FormControl >
+                  <Select
+                    className={select === 'seguidores'
+                      ? 'select candy seguidores' :
+                      select === 'meta' ? 'select candy meta' : 'select candy  plataforma'}
+                    value={select}
+                    onChange={(e) => onChangeSelect(e)}
+                  >
+                    <MenuItem className={select === 'seguidores'
+                      ? 'select candy seguidores' :
+                      select === 'meta' ? 'select candy meta' : 'select candy  plataforma'} value="seguidores" id='seguidores'>SEGUIDORES POR PLATAFORMA</MenuItem>
+                    <MenuItem className={select === 'seguidores'
+                      ? 'select candy seguidores' :
+                      select === 'meta' ? 'select candy meta' : 'select candy  plataforma'} value="plataforma" id='paltaforma'>VOLUMEN DE MENCIONES</MenuItem>
+                    <MenuItem className={select === 'seguidores'
+                      ? 'select candy seguidores' :
+                      select === 'meta' ? 'select candy meta' : 'select candy  plataforma'} value="meta" id='meta' >INVERSION EN META</MenuItem>
+                  </Select>
+                </FormControl>
+              </Col>
+              <Col md={4} >
               </Col>
             </Row>
           </Col>
@@ -351,8 +374,8 @@ const App = (props) => {
                   <Grid item xs={12} md={6}>
                     <label>¿Para qué lo vas a usar?</label>
                     <Select className='input' name='uso' value={user.uso} onChange={handleChange} required>
-                      <MenuItem value='prensa'>Para publicar en prensa.</MenuItem>
-                      <MenuItem value='analisispersonal'>Para analizar por mi cuenta los datos.</MenuItem>
+                      <MenuItem value='prensa'>Publicar en prensa.</MenuItem>
+                      <MenuItem value='analisispersonal'>Analizar por mi cuenta los datos.</MenuItem>
                     </Select>
                   </Grid>
                 </Grid>
