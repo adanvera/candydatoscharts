@@ -710,6 +710,13 @@ tspan {
     margin-bottom: 0.3rem !important;
   }
 
+
+  .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-6.css-1fyyp8j-MuiGrid-root {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 
 button.mt-5.btn.btn-primary:hover {
@@ -840,6 +847,12 @@ select.select.candy.meta.form-select {
   .textt {
     margin-top: 0.3rem !important;
     margin-bottom: 0.3rem !important;
+  }
+
+  .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-6.css-1fyyp8j-MuiGrid-root {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
 
