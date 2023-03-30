@@ -255,6 +255,9 @@ const RedesData = (props) => {
     santifb.tooltipText = "Santi Peña"
     // add fill gradient to series
     santifb.fillOpacity = 0.04
+    // add color to the bullet displayed in the line chart
+    santifb.tooltip.getFillFromObject = false;
+    santifb.tooltip.background.fill = am4core.color("#DA7A67");
 
     // Add cursor
     chart.cursor = new am4charts.XYCursor();
@@ -281,6 +284,8 @@ const RedesData = (props) => {
     santitw.tooltipText = "Santi Peña"
     // add fill gradient to series
     santitw.fillOpacity = 0.04
+    santitw.tooltip.getFillFromObject = false;
+    santitw.tooltip.background.fill = am4core.color("#DA7A67");
 
     //add a dot bullet to the series
     var bullet = santitw.bullets.push(new am4charts.CircleBullet());
@@ -303,6 +308,9 @@ const RedesData = (props) => {
     santinsta.tooltipText = "Santi Peña"
     // add fill gradient to series
     santinsta.fillOpacity = 0.04
+    // change color of the name displayed in the tooltip
+    santinsta.tooltip.getFillFromObject = false;
+    santinsta.tooltip.background.fill = am4core.color("#DA7A67");
 
     //add a dot bullet to the series
     var bullet = santinsta.bullets.push(new am4charts.CircleBullet());
@@ -322,6 +330,9 @@ const RedesData = (props) => {
     // add color to the line displayed in the line chart
     santitk.stroke = am4core.color("#DA7A67");
     santitk.fill = am4core.color("#DA7A67");
+    // change color of the name displayed in the tooltip
+    santitk.tooltip.getFillFromObject = false;
+    santitk.tooltip.background.fill = am4core.color("#DA7A67");
     // add label to the line displayed in the line chart
     santitk.tooltipText = "Santi Peña"
     // add fill gradient to series
@@ -436,6 +447,8 @@ const RedesData = (props) => {
     chilafb.tooltipText = "Jose Luis Chilavert"
     // add fill gradient to series
     chilafb.fillOpacity = 0.04
+    chilafb.tooltip.getFillFromObject = false;
+    chilafb.tooltip.background.fill = am4core.color("#DA7A67");
 
     //add a dot bullet to the series
     var bullet = chilafb.bullets.push(new am4charts.CircleBullet());
@@ -458,6 +471,8 @@ const RedesData = (props) => {
     chilatw.tooltipText = "Jose Luis Chilavert"
     // add fill gradient to series
     chilatw.fillOpacity = 0.04
+    chilatw.tooltip.getFillFromObject = false;
+    chilatw.tooltip.background.fill = am4core.color("#DA7A67");
 
     //add a dot bullet to the series
     var bullet = chilatw.bullets.push(new am4charts.CircleBullet());
@@ -480,6 +495,8 @@ const RedesData = (props) => {
     chilainsta.tooltipText = "Jose Luis Chilavert"
     // add fill gradient to series
     chilainsta.fillOpacity = 0.04
+    chilainsta.tooltip.getFillFromObject = false;
+    chilainsta.tooltip.background.fill = am4core.color("#DA7A67");
 
     //add a dot bullet to the series
     var bullet = chilainsta.bullets.push(new am4charts.CircleBullet());
@@ -502,6 +519,8 @@ const RedesData = (props) => {
     chilatk.tooltipText = "Jose Luis Chilavert"
     // add fill gradient to series
     chilatk.fillOpacity = 0.04
+    chilatk.tooltip.getFillFromObject = false;
+    chilatk.tooltip.background.fill = am4core.color("#DA7A67");
 
     //add a dot bullet to the series
     var bullet = chilatk.bullets.push(new am4charts.CircleBullet());
@@ -524,6 +543,8 @@ const RedesData = (props) => {
     euclifb.tooltipText = "Euclides Acevedo"
     // add fill gradient to series
     euclifb.fillOpacity = 0.04
+    euclifb.tooltip.getFillFromObject = false;
+    euclifb.tooltip.background.fill = am4core.color("#F6A72F");
 
     //add a dot bullet to the series
     var bullet = euclifb.bullets.push(new am4charts.CircleBullet());
@@ -546,6 +567,8 @@ const RedesData = (props) => {
     euclitw.tooltipText = "Euclides Acevedo"
     // add fill gradient to series
     euclitw.fillOpacity = 0.04
+    euclitw.tooltip.getFillFromObject = false;
+    euclitw.tooltip.background.fill = am4core.color("#F6A72F");
 
     //add a dot bullet to the series
     var bullet = euclitw.bullets.push(new am4charts.CircleBullet());
@@ -568,6 +591,8 @@ const RedesData = (props) => {
     eucliinsta.tooltipText = "Euclides Acevedo"
     // add fill gradient to series
     eucliinsta.fillOpacity = 0.04
+    eucliinsta.tooltip.getFillFromObject = false;
+    eucliinsta.tooltip.background.fill = am4core.color("#F6A72F");
 
     //add a dot bullet to the series
     var bullet = eucliinsta.bullets.push(new am4charts.CircleBullet());
@@ -590,6 +615,8 @@ const RedesData = (props) => {
     euclitk.tooltipText = "Euclides Acevedo"
     // add fill gradient to series
     euclitk.fillOpacity = 0.04
+    euclitk.tooltip.getFillFromObject = false;
+    euclitk.tooltip.background.fill = am4core.color("#F6A72F");
 
     //add a dot bullet to the series
     var bullet = euclitk.bullets.push(new am4charts.CircleBullet());
@@ -612,6 +639,8 @@ const RedesData = (props) => {
     payofb.tooltipText = "Payo Cubas"
     // add fill gradient to series
     payofb.fillOpacity = 0.04
+    payofb.tooltip.getFillFromObject = false;
+    payofb.tooltip.background.fill = am4core.color("#F18B3A");
 
     //add a dot bullet to the series
     var bullet = payofb.bullets.push(new am4charts.CircleBullet());
@@ -634,6 +663,8 @@ const RedesData = (props) => {
     payotw.tooltipText = "Payo Cubas"
     // add fill gradient to series
     payotw.fillOpacity = 0.04
+    payotw.tooltip.getFillFromObject = false;
+    payotw.tooltip.background.fill = am4core.color("#F18B3A");
 
     //add a dot bullet to the series
     var bullet = payotw.bullets.push(new am4charts.CircleBullet());
@@ -656,6 +687,8 @@ const RedesData = (props) => {
     payoinsta.tooltipText = "Payo Cubas"
     // add fill gradient to series
     payoinsta.fillOpacity = 0.04
+    payoinsta.tooltip.getFillFromObject = false;
+    payoinsta.tooltip.background.fill = am4core.color("#F18B3A");
 
     //add a dot bullet to the series
     var bullet = payoinsta.bullets.push(new am4charts.CircleBullet());
@@ -678,6 +711,8 @@ const RedesData = (props) => {
     payotk.tooltipText = "Payo Cubas"
     // add fill gradient to series
     payotk.fillOpacity = 0.04
+    payotk.tooltip.getFillFromObject = false;
+    payotk.tooltip.background.fill = am4core.color("#F18B3A");
 
     //add a dot bullet to the series
     var bullet = payotk.bullets.push(new am4charts.CircleBullet());
