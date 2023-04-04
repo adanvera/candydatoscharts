@@ -1006,7 +1006,7 @@ option.meta {
 }
 
 body {
-  background: transparent !important;
+  background: linear-gradient(180deg, #EFECFB 0%, #E7EDFB 100%);
 }
 
 .main.container {
@@ -1229,4 +1229,47 @@ input#outlined-basic {
   border: 1px solid #5E5CA5;
   color: #5E5CA5;
   /* Cambiar color de borde aquí */
+}
+
+.header.col-md-6 {
+  text-align: center;
+}
+
+.ctimage {
+  position: relative;
+}
+
+#caramelo1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#caramelo2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 11%;
+}
+
+.footerimg{
+  position: relative;
+}
+
+#caramelo3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 11%;
+}
+
+#caramelo4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 11%;
 }

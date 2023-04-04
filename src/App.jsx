@@ -14,10 +14,12 @@ import logo from './assets/images/logo.png'
 import Menciones from './Menciones';
 import Plataformas from './Plataformas';
 import { Box, DialogActions, FormControl, FormControlLabel, FormLabel, Grid, IconButton, InputLabel, MenuItem, Modal, Radio, RadioGroup, Select, TextField, Typography } from '@mui/material';
-import { Dialog } from '@mui/material';
 import axios from 'axios';
-import check from './assets/images/icos/success.png'
-
+import compara from './assets/images/compara.png';
+import caramelo from './assets/images/caramelo1.png'
+import carametwo from './assets/images/caramelo2.png'
+import caramethree from './assets/images/caramelo3.png'
+import caramefour from './assets/images/caramelo4.png'
 
 // const useStyles = makeStyles((theme) => ({
 //   formControl: {
@@ -249,9 +251,33 @@ const App = (props) => {
     }
   }
 
+  document.addEventListener("mousemove", parallax);
+  function parallax(e) {
+    document.querySelectorAll('.object').forEach(function (move) {
+      var speed = move.getAttribute('data-value');
+      var x = (window.innerWidth - e.pageX * speed) / 100;
+      var y = (window.innerHeight - e.pageY * speed) / 100;
+      move.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    });
+  }
+
   return (
     <div className="App">
-      <Container className={hideElements === true ? 'main bkpsc' : 'main'} ref={nodeRef} >
+      <Container isFluid={true} className={hideElements === true ? 'main bkpsc' : 'main'} ref={nodeRef} >
+        <div className='ctimage'>
+          <img src={caramelo} className='object' data-value="-2" id='caramelo1' />
+          <img src={carametwo} className='object' data-value="-5" id='caramelo2' />
+        </div>
+        <section className='header-top mb-3'>
+          <Row>
+            <Col md={6} className='header'>
+              <img src={logo} />
+            </Col>
+            <Col md={6} className='header'>
+              <img src={compara} />
+            </Col>
+          </Row>
+        </section>
         <Row className=''>
           <Col md={12} className='header'>
             <Row className='tophead'>
@@ -321,106 +347,20 @@ const App = (props) => {
             </div>
             <h4>EXPORTA LA COMPARACIÓN</h4>
             <p>
-              Descarga ahora como <span onClick={handleScreenshot} className='clickeed'>JPG</span>
+              <span onClick={handleScreenshot} className='clickeed'> Descarga ahora como JPG</span>
             </p>
-            <div className='separador'></div>
-            {
-              !dataSended &&
-              <div className='textt'>
-                <p>Registrate para descargar los datos</p>
-                <p>en formato CSV/Excel</p>
-              </div>
-            }
-            <form>
-              {
-                !dataSended &&
-                <>
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
-                      <TextField
-                        className='input'
-                        id="outlined-basic"
-                        label="Nombre"
-                        variant="outlined"
-                        name='name'
-                        value={user.name}
-                        onChange={handleChange}
-                        required
-                      />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      <TextField
-                        className='input'
-                        id="outlined-basic"
-                        label="Email"
-                        variant="outlined"
-                        name='email'
-                        value={user.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      <TextField
-                        className='input'
-                        id="outlined-basic"
-                        label="Teléfono"
-                        variant="outlined"
-                        name='phone'
-                        value={user.phone}
-                        onChange={handleChange}
-                        required
-                      />
-                    </Grid>
-                  </Grid>
-                  <div>
-                  <label className='mt-3 mb-2'>¿Para qué lo vas a usar?</label>
-                  </div>
-                  <Grid className="radiooo mb-2">
-                    <Grid className="optionsradio">
-                      <FormControl className='raddopt'>
-                        {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}
-                        <RadioGroup
-                          aria-labelledby="demo-radio-buttons-group-label"
-                          defaultValue={user.uso}
-                          id='uso'
-                          name='uso'
-                          value={user.uso}
-                          onChange={handleChange} required>
-                          <FormControlLabel value="prensa" control={<Radio />} label="Publicar en prensa" />
-                          <FormControlLabel value="analisispersonal" control={<Radio />} label="Analizar por mi cuenta los datos" />
-                        </RadioGroup>
-                      </FormControl>
-                    </Grid>
-                  </Grid>
-                </>
-              }
-              {
-                dataSended &&
-                <div>
-                  <div className='successmsg' >
-                    <span>Registro exitoso</span>
-                  </div>
-                  <div>
-                    <img src={check} alt='check' />
-                  </div>
-                </div>
-              }
-            </form>
             <DialogActions className='emete'>
               <Button className='btnnn mt-3' onClick={handleClose}>Cerrar</Button>
-              {
-                !dataSended &&
-                <Button className='btnnn mt-3' onClick={handleSubmit} autoFocus>
-                  REGISTRARSE
-                </Button>
-              }
             </DialogActions>
           </Box>
         </Modal>
         {
           renderButton(hideElements, modalShow)
         }
+        <footer className='footerimg'>
+          <img src={caramethree} className='object' data-value="-2" id='caramelo3' />
+          <img src={caramefour} className='object' data-value="-5" id='caramelo4' />
+        </footer>
       </Container>
     </div>
   )
