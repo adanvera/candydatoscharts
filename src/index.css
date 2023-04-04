@@ -713,7 +713,6 @@ tspan {
     text-align: center;
     justify-content: center;
   }
-
 }
 
 span.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
@@ -803,6 +802,14 @@ select.select.candy.meta.form-select {
 }
 
 @media only screen and (max-width: 600px) {
+  .ctimage {
+    display: none;
+  }
+
+  footer.footerimg {
+    display: none;
+  }
+
   .main.container {
     /* background-color: red; */
   }
@@ -1255,7 +1262,7 @@ input#outlined-basic {
   width: 11%;
 }
 
-.footerimg{
+.footerimg {
   position: relative;
 }
 
