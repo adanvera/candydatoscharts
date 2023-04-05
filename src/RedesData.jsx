@@ -448,7 +448,7 @@ const RedesData = (props) => {
     // add fill gradient to series
     chilafb.fillOpacity = 0.04
     chilafb.tooltip.getFillFromObject = false;
-    chilafb.tooltip.background.fill = am4core.color("#DA7A67");
+    chilafb.tooltip.background.fill = am4core.color("#B67294");
 
     //add a dot bullet to the series
     var bullet = chilafb.bullets.push(new am4charts.CircleBullet());
@@ -472,7 +472,7 @@ const RedesData = (props) => {
     // add fill gradient to series
     chilatw.fillOpacity = 0.04
     chilatw.tooltip.getFillFromObject = false;
-    chilatw.tooltip.background.fill = am4core.color("#DA7A67");
+    chilatw.tooltip.background.fill = am4core.color("#B67294");
 
     //add a dot bullet to the series
     var bullet = chilatw.bullets.push(new am4charts.CircleBullet());
@@ -496,7 +496,7 @@ const RedesData = (props) => {
     // add fill gradient to series
     chilainsta.fillOpacity = 0.04
     chilainsta.tooltip.getFillFromObject = false;
-    chilainsta.tooltip.background.fill = am4core.color("#DA7A67");
+    chilainsta.tooltip.background.fill = am4core.color("#B67294");
 
     //add a dot bullet to the series
     var bullet = chilainsta.bullets.push(new am4charts.CircleBullet());
@@ -520,7 +520,7 @@ const RedesData = (props) => {
     // add fill gradient to series
     chilatk.fillOpacity = 0.04
     chilatk.tooltip.getFillFromObject = false;
-    chilatk.tooltip.background.fill = am4core.color("#DA7A67");
+    chilatk.tooltip.background.fill = am4core.color("#B67294");
 
     //add a dot bullet to the series
     var bullet = chilatk.bullets.push(new am4charts.CircleBullet());
