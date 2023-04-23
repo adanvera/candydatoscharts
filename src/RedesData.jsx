@@ -193,12 +193,20 @@ const RedesData = (props) => {
             587000, 84962, 48509, 17708,// datos de redes de payo
         ),
         createDinamicData(
-            2023, 2, // marzo
-            237000, 313506, 135490, 55952, // datos de redes de santi peña
-            258000, 50145, 14201, 0,  // datos de redes de efrain
-            357, 259331, 21710, 10026, // datos de redes de chila
-            127000, 243944, 103096, 20661, // datos de redes de euclides
-            588000, 85391, 49578, 23279, // datos de redes de payo
+            2023, 2, // marzo sfb, stw, sinsta, stk,
+            239000, 314362, 136962, 56732, // datos de redes de santi peña
+            258000, 50349, 14641, 0,  // datos de redes de efrain
+            357, 259369, 22146, 10029, // datos de redes de chila
+            127000, 243944, 103096, 20996, // datos de redes de euclides
+            589000, 85562, 50176, 26225, // datos de redes de payo
+        ),
+        createDinamicData(
+            2023, 3, // abril sfb, stw, sinsta, stk,
+            244000, 316648, 142529, 58156, // datos de redes de santi peña
+            260000, 51125, 16586, 0,  // datos de redes de efrain
+            359, 259172, 23073, 10019, // datos de redes de chila
+            127000, 244085, 104588, 24387, // datos de redes de euclides
+            593000, 86694, 63410, 32660, // datos de redes de payo
         )
     ]
 

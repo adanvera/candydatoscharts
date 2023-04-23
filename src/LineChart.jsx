@@ -21,13 +21,13 @@ const LineChart = (props) => {
 
     const santi = {
         "candydato": "Santi Peña",
-        "inversion": 354798249,
+        "inversion": 709416607,
         "color": "#DD7969",
     }
 
     const efrain = {
         "candydato": "Efraín Alegre",
-        "inversion": 67056894,
+        "inversion": 61863283,
         "color": "#966AA7",
     }
 
@@ -39,7 +39,7 @@ const LineChart = (props) => {
 
     const euclides = {
         "candydato": "Euclides Acevedo",
-        "inversion": 12190733,
+        "inversion": 17218497,
         "color": "#FF9671",
     }
 
@@ -81,7 +81,7 @@ const LineChart = (props) => {
 
     const otros = {
         "candydato": "Otros",
-        "inversion": calcularTotalOtros(1487995426, filterCandidates),
+        "inversion": calcularTotalOtros(1972617509, filterCandidates),
         "color": "#80D4A3"
     }
 

@@ -27,14 +27,14 @@ const Pie = (props) => {
 
     const santi = {
         "candydato": "Santi Peña",
-        "inversion": 354798249,
+        "inversion": 709416607,
         "color": "#DD7969",
         "href": { imgsanti }
     }
 
     const efrain = {
         "candydato": "Efraín Alegre",
-        "inversion": 67056894,
+        "inversion": 61863283,
         "color": "#966AA7",
         "href": { imgefrain }
     }
@@ -48,7 +48,7 @@ const Pie = (props) => {
 
     const euclides = {
         "candydato": "Euclides Acevedo",
-        "inversion": 12190733,
+        "inversion": 17218497,
         "color": "#FF9671",
         "href": { imgeuclides }
     }
@@ -92,7 +92,7 @@ const Pie = (props) => {
 
     const otros = {
         "candydato": "Otros",
-        "inversion": 1487995426,
+        "inversion": 1972617509,
         "color": "#80D4A3"
     }
 

@@ -27,35 +27,35 @@ const PieTwo = (props) => {
 
     const santi = {
         "candydato": "Santi Peña",
-        "inversion": 103271,
+        "inversion": 106316,
         "color": "#DD7969",
         "href": { imgsanti }
     }
 
     const efrain = {
         "candydato": "Efraín Alegre",
-        "inversion": 30787,
+        "inversion": 35079,
         "color": "#966AA7",
         "href": { imgefrain }
     }
 
     const chila = {
         "candydato": "José Luis Chilavert",
-        "inversion": 20416,
+        "inversion": 18445,
         "color": "#FF6F91",
         "href": { imgchila }
     }
 
     const euclides = {
         "candydato": "Euclides Acevedo",
-        "inversion": 14205,
+        "inversion": 13949,
         "color": "#FF9671",
         "href": { imgeuclides }
     }
 
     const payo = {
         "candydato": "Payo Cubas",
-        "inversion": 4715,
+        "inversion": 5267,
         "color": "#FFC75F",
         "href": { imgpayo }
     }
@@ -92,7 +92,7 @@ const PieTwo = (props) => {
 
     const otros = {
         "candydato": "Otros",
-        "inversion": 396207,
+        "inversion": 419361,
         "color": "#80D4A3"
     }
 
